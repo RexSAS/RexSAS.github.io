@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CO2 Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./scripts.js"></script>
+  </head>
+  <body>
+    <div class="filter"></div>
+    <center>
+      <div class="header">
+        <h1>CO2 Online Calculator</h1>
+      </div>
+      <div class="butt">
+
+          <a href="./downloadable/script.cpp"><button class="download" id="a"><img src="./img/c-.png" style="height: 20px" /></button></a>
+          <a href="./downloadable/script.py"><button class="download" id="b"><img src="./img/python.png" style="height: 20px" /></button></a>
+
+        <button id="download" class="download" onclick="Write()">
+          <img src="./img/download.png" style="height: 20px" />
+        </button>
+      </div>
+
+
+      <div class="container">
+        <div class="form-container">
+          <h1 id="res">0 Kg</h1>
+          <form>
+            <input type="number" placeholder="mAh" id="1" />
+            <input type="number" placeholder="V" id="2" />
+            <button type="button" onclick="Calculate()">Calculate</button>
+          </form>
+        </div>
+      </div>
+    </center>
+    <footer>
+      <p><a href="./downloadable/site.zip" id="foot">Coded</a> by <i>Rex_SAS</i></p>
+    </footer>
+  </body>
+</html>
