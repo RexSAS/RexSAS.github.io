@@ -2,8 +2,14 @@
 #include <fstream>
 using namespace std;
 
+class Phone{
+   private:
+        float mAh, V;
+        
+};
+
 int main() {
-    int mAh, V;
+    float mAh, V;
     cout << "Inserisci i mAh: ";
     cin >> mAh;
     cout << "Inserisci i V: ";
