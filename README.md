@@ -1,1 +1,2 @@
-# RexSAS.github.io
+# Progetto scolastico
+Sito svilupppato da Andrea Faveri
