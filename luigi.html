@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuga dall'Ariosto</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-image: url(bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50%;
+      color: #fff;
+      padding: 50px;
+      font-size: 36px;
+    }
+
+    hr {
+        margin-top: -20px;
+        background-color: #cb3234;
+        height: 10px;
+        width: 25%;
+        border: 0;
+    }
+
+
+    section {
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    h4 {
+      font-size: 25px;
+    }
+
+    .container {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      width: 25%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    label {
+      margin-bottom: 10px;
+      font-size: 18px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-left: 5px;
+      background-color: #cb3234;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    button:hover {
+      background-color: #a11d1f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fuga dall'Ariosto</h1>
+    <hr>
+  </header>
+  <!-- lianbfoorramtaotriicoa -->
+  <h4>Sopra il piano, un segreto si cela,</h4>
+  <h4>Sotto il sapere, un foglio svela.  </h4>
+  <h4>Una parola criptata, un enigma in più,</h4>
+  <h4>Ma del pari e del dispari farai la tua vitù.</h4>
+
+  <div class="container">
+    <input id="risposta" type="text" placeholder="Risposta" name="risposta" onclick="base()" required>
+    <button type="submit" onclick="showContent()">Rispondi</button>
+  </div>
+
+  <script>
+    function base(){
+      var input = document.getElementById("risposta");
+        input.style.color = "black";
+        input.style.backgroundColor = "#ffff";
+        input.style.fontWeight = "unset";
+    }
+    function showContent() {
+      var value = document.getElementById("risposta").value;
+      if (value == "laboratorio informatica"){
+        document.getElementById("risposta").style.color = "green";
+        window.location.href = "ambrogio.html";
+      }
+      else{
+        var input = document.getElementById("risposta");
+        input.style.backgroundColor = "#ffd8d6";
+        input.style.color = "red";
+        input.style.fontWeight = "bold";
+      }
+    }
+  </script>
+</body>
+</html>
