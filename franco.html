@@ -103,6 +103,9 @@
 
 <img src="sas.png" alt="5" data-numero="5" onclick="click(this)">
 
+<img src="sas.png" alt="6" data-numero="6" onclick="click(this)">
+
+
 
 <div class="container">
     <button type="submit" onclick="showContent()">Rispondi</button>
@@ -110,6 +113,15 @@
 
 
   <script>
+
+    let answ = [];
+
+    function click(img) {
+      let val = img.getAttribute("data-numero");
+      alert(val);
+    }
+
+
     function showContent() {
       var value = document.getElementById("risposta").value;
       if (value == "13"){
