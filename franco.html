@@ -89,20 +89,27 @@
     <hr>
   </header>
   <h3>Quanti triangoli vedi???!!</h3>
-  <img src="bha.png" alt="bah">
 
-  <div class="container">
-    <input id="risposta" type="text" placeholder="Risposta" name="risposta" onclick="base()" required>
+
+
+
+  <img src="sas.png" alt="1" data-numero="1" onclick="click(this)"> 
+
+<img src="sas.png" alt="1" data-numero="2" onclick="click(this)">
+
+<img src="sas.png" alt="1" data-numero="3" onclick="click(this)">
+
+<img src="sas.png" alt="1" data-numero="4" onclick="click(this)">
+
+<img src="sas.png" alt="1" data-numero="5" onclick="click(this)">
+
+
+<div class="container">
     <button type="submit" onclick="showContent()">Rispondi</button>
-  </div>
+</div>
+
 
   <script>
-    function base(){
-      var input = document.getElementById("risposta");
-        input.style.color = "black";
-        input.style.backgroundColor = "#ffff";
-        input.style.fontWeight = "unset";
-    }
     function showContent() {
       var value = document.getElementById("risposta").value;
       if (value == "13"){
