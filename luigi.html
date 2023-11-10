@@ -108,7 +108,7 @@
     }
     function showContent() {
       var value = document.getElementById("risposta").value;
-      if (value == "laboratorio informatica"){
+      if (value.toLowerCase() == "laboratorio informatica"){
         document.getElementById("risposta").style.color = "green";
         window.location.href = "ambrogio.html";
       }
