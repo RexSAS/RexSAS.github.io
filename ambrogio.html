@@ -109,7 +109,7 @@
     }
     function showContent() {
       var value = document.getElementById("risposta").value;
-      if (value == "crittografia"){
+      if (value.toLowerCase() == "crittografia"){
         document.getElementById("risposta").style.color = "green";
         window.location.href = "franco.html";
       }
