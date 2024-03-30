@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuga dall'Ariosto</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-image: url(bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50%;
+      color: #fff;
+      padding: 50px;
+      font-size: 36px;
+    }
+
+    hr {
+        margin-top: -20px;
+        background-color: #cb3234;
+        height: 10px;
+        width: 25%;
+        border: 0;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    h3 {
+      color: #cb3234;
+      font-size: 48px;
+    }
+
+    h4 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    p {
+      color: #333;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .instructions {
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    ul {
+      list-style-type:circle;
+      padding: 0;
+    }
+
+    li {
+      font-size: 24px;
+      margin-left: 2.5%;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    #start-button {
+      background-color: #cb3234;
+      color: #fff;
+      font-size: 24px;
+      padding: 10px 40px;
+      margin-top: 2.5%;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function start(){
+      window.location.href = "carlo.html";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Fuga dall'Ariosto</h1>
+    <hr>
+  </header>
+  <section>
+    <h3>Benvenuti!</h3>
+    <h4>Siete bloccati nell'Ariosto e dovete risolvere gli enigmi per fuggire. Buona fortuna!</h4>
+
+    <div class="instructions">
+      <h2>Istruzioni iniziali:</h2>
+      <ul>
+        <li>Risolvete tutti gli enigmi per fuggire.</li>
+        <li>Osservate il laboratorio in cerca di indizi per andare avanti.</li>
+        <li>Se vi trovate in difficoltà, potrete chiedere aiuto agli studenti che vi hanno accolto in laboratorio.</li>
+      </ul>
+    </div>
+    
+    <button id="start-button" onclick=start()>START</button>
+  </section>
+</body>
+</html>
