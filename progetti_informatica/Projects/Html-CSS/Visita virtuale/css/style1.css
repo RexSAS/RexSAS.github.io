@@ -1,0 +1,73 @@
+body{
+  font-family: "roboto", sans-serif;
+}
+p{
+  text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+}
+.bg{
+  background-image: url(../img/muro.jpg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -50;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}
+.home{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  right: 5%;
+  top: 50px;
+  border: solid white 5px;
+  padding: 15px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: black;
+  transition: color 1s, border-color 1s, background-color 1s;
+}
+.home:hover{
+  color: black;
+  border-color: white;
+  background-color: #fff;
+}
+.bt_desc{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  right: 5%;
+  top: 150px;
+  border: solid white 5px;
+  padding: 15px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: black;
+  transition: color 0.5s, border-color 0.5s, background-color 0.5s;
+}
+.bt_desc:hover{
+  color: black;
+  border-color: white;
+  background-color: #fff;
+}
+.dip{
+  width: 50%;
+  position: absolute;
+  inset: 25% 0px 0px 25%;
+}
+.title{
+  font-size: 50px;
+  color: white;
+  margin-left: 50px;
+}
+
+#desc{
+  color: white;
+  font-size: 20px;
+  margin-top: 50%;
+}
+#desc span{
+  font-size: 40px;
+}

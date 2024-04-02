@@ -1,0 +1,63 @@
+body, html {
+  height: 99%;
+  font-family: "roboto",sans-serif;
+
+}
+
+.bg {
+  background-image: url(img/home.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -50;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.title{
+  font-size: 70px;
+  text-align: center;
+  text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff	;
+}
+
+.f1, .f2, .f3, .f4{
+  position: absolute;
+  width: 300px;
+  height: 500px;
+  margin-top: 10%;
+  transition: width 0.5s, height 0.5s;
+}
+.f1f, .f2f, .f3f, .f4f{
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.f1{
+  margin-left: 2%;
+}
+.f2{
+  margin-left: 27%;
+}
+.f3{
+  margin-left: 52%;
+}
+.f4{
+  margin-left: 77%;
+}
+
+.i1, .i2, .i3, .i4{
+  border-radius: 10px 10px 10px 10px;
+  width: 100%;
+  position: absolute;
+  z-index: 1
+}
+
+.f1:hover, .f2:hover, .f3:hover, .f4:hover{
+  width: 310px;
+  height: 510px;
+}
