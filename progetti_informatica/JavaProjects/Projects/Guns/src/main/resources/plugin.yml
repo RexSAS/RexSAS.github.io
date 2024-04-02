@@ -1,0 +1,5 @@
+name: Guns
+version: '${project.version}'
+main: guns.guns.Guns
+api-version: 1.18
+authors: [ Rex_SAS ]
