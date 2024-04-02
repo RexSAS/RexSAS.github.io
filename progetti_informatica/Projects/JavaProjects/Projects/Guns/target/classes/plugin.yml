@@ -1,0 +1,5 @@
+name: Guns
+version: '1.0-SNAPSHOT'
+main: guns.guns.Guns
+api-version: 1.18
+authors: [ Rex_SAS ]

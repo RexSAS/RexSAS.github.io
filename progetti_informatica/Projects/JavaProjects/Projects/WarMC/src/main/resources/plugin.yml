@@ -1,0 +1,62 @@
+name: WarMC
+version: '${project.version}'
+main: warmc.warmc.WarMC
+api-version: 1.18
+authors: [ Rex_SAS ]
+depend:
+  - Vault
+commands:
+  site:
+    description: site.
+    usage: /<command>
+    aliases:
+      - site
+      - sito
+      - www
+  bag:
+    description: apre lo zaino.
+    usage: /<command>
+    aliases:
+      - zaino
+      - bag
+  help:
+    description: aiuto.
+    usage: /<command>
+    aliases:
+      - help
+      - aiuto
+  vote:
+    description: Minecraft Italiia.
+    usage: /<command>
+    aliases:
+      - vote
+      - vota
+      - minecraft-italia
+  discord:
+    description: WarMC discord
+    usage: /<command>
+    aliases:
+      - discord
+  jeb:
+    description: jebx28 twitch.
+    usage: /<command>
+    aliases:
+      - jeb
+      - twitch
+  social:
+    description: WarMC socials.
+    usage: /<command>
+    aliases:
+      - social
+  ig:
+    description: WarMC Instagram.
+    usage: /<command>
+    aliases:
+      - ig
+      - instagram
+  changelog:
+    description: WarMC last changelog.
+    usage: /<command>
+    aliases:
+      - changelog
+      - update
