@@ -212,6 +212,65 @@
     <!-- custom -->
     <script src="js/custom.js"></script>
 
+    Per far sì che la modalità fullscreen venga attivata automaticamente non appena il sito viene aperto, puoi chiamare la funzione toggleFullscreen() direttamente quando la pagina si carica. Puoi farlo aggiungendo un'istruzione per chiamare la funzione nel tuo codice JavaScript, ad esempio nell'evento DOMContentLoaded. Ecco come puoi modificare il codice per farlo:
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fullscreen Demo</title>
+<style>
+  /* Stile per il contenitore fullscreen */
+  #fullscreen-container {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    height: 100vh;
+  }
+</style>
+</head>
+<body>
+
+<div id="fullscreen-container">
+  <h1>Benvenuto nel mio sito fullscreen!</h1>
+  <p>Il sito verrà aperto in modalità fullscreen.</p>
+</div>
+
+<script>
+// Funzione per attivare/disattivare la modalità fullscreen
+function toggleFullscreen() {
+  var elem = document.documentElement;
+  if (!document.fullscreenElement) {
+    elem.requestFullscreen().catch(err => {
+      alert(`Errore durante il tentativo di entrare in modalità fullscreen: ${err.message}`);
+    });
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+// Chiamata alla funzione toggleFullscreen() quando la pagina si carica
+document.addEventListener('DOMContentLoaded', () => {
+  toggleFullscreen();
+});
+
+// Event listener per gestire il cambio di stato della modalità fullscreen
+document.addEventListener('fullscreenchange', () => {
+  if (document.fullscreenElement) {
+    console.log('Modalità fullscreen attivata');
+  } else {
+    console.log('Modalità fullscreen disattivata');
+  }
+});
+</script>
+
+	
 </body>
 
 </html>
