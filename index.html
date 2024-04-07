@@ -212,37 +212,6 @@
     <!-- custom -->
     <script src="js/custom.js"></script>
 	
-<script>
-// Funzione per attivare/disattivare la modalità fullscreen
-function toggleFullscreen() {
-  var elem = document.documentElement;
-  if (!document.fullscreenElement) {
-    elem.requestFullscreen().catch(err => {
-      alert(`Errore durante il tentativo di entrare in modalità fullscreen: ${err.message}`);
-    });
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
-  }
-}
-
-// Chiamata alla funzione toggleFullscreen() quando la pagina si carica
-document.addEventListener('DOMContentLoaded', () => {
-  toggleFullscreen();
-});
-
-// Event listener per gestire il cambio di stato della modalità fullscreen
-document.addEventListener('fullscreenchange', () => {
-  if (document.fullscreenElement) {
-    console.log('Modalità fullscreen attivata');
-  } else {
-    console.log('Modalità fullscreen disattivata');
-  }
-});
-</script>
-
-	
 </body>
 
 </html>
