@@ -1586,10 +1586,10 @@ html.theme-dark .embedFull_b0068a:before {
     z-index: -1;
 }
 
-/* Settings/Deafen/Mute Buttons Animated */
+/* Settings/Deafen/Mute Buttons Animated 
 .button_adca65:hover .contents-3ca1mk {
     animation: UserModalButtons 0.5s normal ease;
-}
+}*/
 
 @keyframes UserModalButtons {
     0% {
