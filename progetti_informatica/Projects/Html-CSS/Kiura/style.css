@@ -7,7 +7,7 @@
 
 body{
     background-color: var(--bgColor);
-    font-family: "Brush Script MT", cursive;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     align-content: center;
     justify-items: center;
 }
