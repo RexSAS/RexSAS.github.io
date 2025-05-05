@@ -134,4 +134,9 @@ svg {
 @media only screen and (max-width:500px) {
     /* Phones */
 
+    #main {
+        height: 40vh;
+    }
+    
+
 }
