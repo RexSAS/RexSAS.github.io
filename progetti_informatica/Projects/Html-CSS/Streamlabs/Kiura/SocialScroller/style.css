@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=YourFontName:400,700');
+
+:root {
+  font-family: 'YourFontName', sans-serif;
+  font-size: 7.5vh !important;
+}
+
+body {
+  margin: 10px;
+}
+
+* {
+  font-size: unset;
+}
+
+svg.hidden {
+  display: none;
+}
+
+#all {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  height: 97.5%;
+  border: 2px solid white;
+  border-radius: 5cm;
+  background-color: rgb(230, 117, 255);
+  z-index: -100;
+}
+
+#app {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 69%;
+  padding-left: 5%;
+  margin-left: -30%;
+  background-color: rgb(236, 189, 248);
+  border: 2px solid white;
+  border-radius: 5cm;
+  z-index: 100;
+}
+
+#border-top,
+#border-bottom {
+  position: absolute;
+  height: 0.2rem;
+  width: 0%;
+}
+
+#border-top {
+  top: 0;
+  transform-origin: left;
+}
+
+#border-bottom {
+  bottom: 0;
+  transform-origin: right;
+}
+
+#icon-container {
+  width: 30rem;
+  text-align: right;
+  margin-right: 2rem;
+}
+
+svg {
+  width: 8rem;
+  stroke: currentColor;
+  fill: none;
+  margin-left: 35px;
+}
+
+.discord-logo #bottom_side {
+  stroke-dasharray: 82;
+  stroke-dashoffset: 82;
+}
+.discord-logo #top_side {
+  stroke-dasharray: 84;
+  stroke-dashoffset: 84;
+}
+.discord-logo #left_side,
+.discord-logo #right_side {
+  stroke-dasharray: 143;
+  stroke-dashoffset: 143;
+}
+
+#title, #title * {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#info {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+#content {
+  width: 50rem;
+  height: 8rem;
+  margin-left: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
