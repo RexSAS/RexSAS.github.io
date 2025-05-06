@@ -1,0 +1,41 @@
+/*:root{
+    --primaryColor: #00000000;
+    --secondaryColor: #ffffff;
+    --fontColor: rgb(0, 0, 0);
+}*/
+
+body {
+    margin: 0;
+    background-color: lightslategrey;
+  }
+  
+  #topBar {
+    margin: auto;
+    margin-top: 2vh;
+    justify-items: center;
+    background-color: lightslategrey;
+    box-shadow: inset 0px 0px 10px 7.5px rgba(0, 0, 0, 0.185);
+    width: 80%;
+    height: 10vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
