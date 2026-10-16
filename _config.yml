@@ -1,0 +1,4 @@
+exclude:
+  - SESSION-NOTES.md
+  - README.md
+  - .taste-skill
