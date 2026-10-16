@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School projects · Andrea Faveri</title>
+  <meta name="description" content="Andrea Faveri at Liceo Ariosto: orientation labs for middle-school students in 2022 and 2023, and an environmental sensor network for Lab2Go.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" data-on="accent">
+    <a class="wordmark" href="index.html"><span class="wm-long">Andrea Faveri</span><span class="wm-short" aria-hidden="true">AF</span></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html#about" data-i18n="nav.about">About</a>
+      <a href="index.html#journey" data-i18n="nav.journey">Journey</a>
+      <a href="index.html#skills" data-i18n="nav.skills">Skills</a>
+      <a href="cyberchallenge.html">CyberChallenge</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="toggles">
+      <button class="toggle" type="button" data-lang-toggle aria-label="Passa all'italiano">IT</button>
+      <button class="toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+        <svg data-when="light" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+        <svg data-when="dark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M11 1h2v4h-2zM11 19h2v4h-2zM1 11h4v2H1zM19 11h4v2h-4zM4.2 2.8l2.8 2.8-1.4 1.4-2.8-2.8zM18.4 17l2.8 2.8-1.4 1.4-2.8-2.8zM2.8 19.8l2.8-2.8 1.4 1.4-2.8 2.8zM17 5.6l2.8-2.8 1.4 1.4L18.4 7z"/></svg>
+      </button>
+    </div>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menu</button>
+    <a class="button" href="mailto:andreafaveri05@gmail.com"><span data-i18n="nav.write">Write to me</span></a>
+  </header>
+
+  <main id="top">
+    <section class="page-hero page-hero--sage" data-chapter="sage">
+      <h1 data-rise data-i18n="sch.title">School projects</h1>
+      <p data-rise style="--i:1" data-i18n="sch.lede">What I did at Liceo Ariosto beyond the lessons: two orientation labs for middle-school students, and a sensor network for Lab2Go.</p>
+    </section>
+    <div class="facts-strip facts-strip--sage nums" data-chapter="sage">
+      <div data-reveal><strong>2</strong><span data-i18n="sch.f1">orientation days as a speaker</span></div>
+      <div data-reveal style="--i:1"><strong>2</strong><span data-i18n="sch.f2">games in C, played live</span></div>
+      <div data-reveal style="--i:2"><strong>1</strong><span data-i18n="sch.f3">escape-room website</span></div>
+      <div data-reveal style="--i:3"><strong>CO₂</strong><span data-i18n="sch.f4">and humidity, sent online for Lab2Go</span></div>
+    </div>
+
+    <section class="round" id="orientation" data-chapter="ground" aria-labelledby="or-h">
+      <div class="round__text">
+        <h2 id="or-h" data-reveal>AriostOrienta</h2>
+        <p data-reveal style="--i:1" data-i18n="sch.orP">AriostOrienta is my school’s open day for middle-school students choosing their next school. Twice I ran the computer science lab.</p>
+        <ol>
+          <li data-reveal><strong data-i18n="sch.or1">2022: two games in C</strong><span data-i18n="sch.or1d">I showed students something interactive they could write themselves one day. With tic-tac-toe, pairs of students took turns challenging each other. With hangman, one student picked the word and the whole room called out letters.</span></li>
+          <li data-reveal style="--i:1"><strong data-i18n="sch.or2">2023: Fuga dall’Ariosto</strong><span data-i18n="sch.or2d">The second year I built an interactive website instead: an escape room whose puzzles could only be solved with clues hidden around the lab. Every solution is commented in the page’s source code.</span></li>
+        </ol>
+        <p class="round__result" data-reveal>
+          <a class="link-plain" href="5S/sito_open_day/index.html" data-i18n="sch.siteLink">Play Fuga dall’Ariosto</a> ·
+          <a class="link-plain" href="https://github.com/RexSAS/RexSAS.github.io/blob/main/4S/tris.c" data-i18n="sch.tris">tic-tac-toe in C</a> ·
+          <a class="link-plain" href="https://github.com/RexSAS/RexSAS.github.io/blob/main/4S/hangman.c" data-i18n="sch.hang">hangman in C</a>
+        </p>
+      </div>
+      <figure class="shutter round__tall" data-reveal>
+        <img src="assets/ariosto.jpg" alt="The red tiled façade and glass entrance of Liceo Ariosto in Ferrara" width="1200" height="1600" loading="lazy">
+        <figcaption class="credit" data-i18n="sch.arCap">Liceo Ludovico Ariosto, Ferrara.</figcaption>
+      </figure>
+    </section>
+
+    <div class="photo-pair photo-pair--even" data-chapter="ground">
+      <figure class="shutter" data-reveal>
+        <img src="assets/escape-start.jpg" alt="Start screen of Fuga dall'Ariosto: a welcome message, three instructions and a red Start button" width="1280" height="800" loading="lazy">
+        <figcaption class="credit" data-i18n="sch.esc1">The start screen: “You are locked in the Ariosto and must solve the puzzles to escape.”</figcaption>
+      </figure>
+      <figure class="shutter" data-reveal style="--i:1">
+        <img src="assets/escape-riddle.jpg" alt="A riddle page of Fuga dall'Ariosto: four rhyming lines and an answer box" width="1280" height="800" loading="lazy">
+        <figcaption class="credit" data-i18n="sch.esc2">One of the riddles. The clue was hidden somewhere in the lab.</figcaption>
+      </figure>
+    </div>
+
+    <section class="areas chapter--sage" id="lab2go" data-chapter="sage" aria-labelledby="l2g-h">
+      <div class="areas__head">
+        <div>
+          <h2 id="l2g-h" data-reveal>Lab2Go</h2>
+          <p class="lead" data-reveal style="--i:1" data-i18n="sch.l2gLead">A school project in several parts about building real computer systems in the physical world. My part was the link between the hardware and the web.</p>
+          <p data-reveal style="--i:2" data-i18n="sch.l2gP">An Arduino station measured the air (CO₂, humidity and other values), and I connected it to an online database. The database was the heart of the system: a web interface on top of it made the collected data easy to analyse.</p>
+        </div>
+        <figure class="shutter" data-reveal>
+          <img src="assets/arduino.jpg" alt="An Arduino Uno microcontroller board" width="1600" height="1203" loading="lazy">
+        </figure>
+      </div>
+      <dl>
+        <div data-reveal><dt>Arduino</dt><dd data-i18n="sch.l1">My first real hardware: how a microcontroller reads sensors and sends their values on.</dd></div>
+        <div data-reveal style="--i:1"><dt data-i18n="sch.l2">Real applications</dt><dd data-i18n="sch.l2d">Software that does something useful outside the screen, in this case for the environment.</dd></div>
+        <div data-reveal style="--i:2"><dt data-i18n="sch.l3">Reading the data</dt><dd data-i18n="sch.l3d">Analysing measurements that help manage everyday spaces and reduce our impact on them.</dd></div>
+      </dl>
+    </section>
+
+    <a class="next" href="index.html" data-chapter="accent"><strong><span data-i18n="ccp.home">Back to the home page</span>&nbsp;→</strong></a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-cols">
+      <div><h2>Andrea Faveri</h2><ul class="list"><li data-i18n="foot.role">Software and security</li><li data-i18n="contact.city">Ferrara, Italy</li></ul></div>
+      <div><h2 data-i18n="foot.pages">Pages</h2><ul class="list"><li><a href="index.html" data-i18n="nav.home">Home</a></li><li><a href="index.html#journey" data-i18n="nav.journey">Journey</a></li><li><a href="school.html" data-i18n="nav.school">School projects</a></li><li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li></ul></div>
+      <div><h2 data-i18n="foot.else">Elsewhere</h2><ul class="list"><li><a href="https://github.com/RexSAS" rel="me">GitHub</a></li><li><a href="https://www.instagram.com/rex_sas/" rel="me">Instagram</a></li><li><a href="mailto:andreafaveri05@gmail.com">Email</a></li></ul></div>
+      <div><h2 data-i18n="foot.site">This site</h2><ul class="list"><li data-i18n="foot.built">Hand-written HTML, CSS and JavaScript</li><li data-i18n="foot.fonts">Libre Franklin and Source Serif 4</li></ul></div>
+    </div>
+    <p class="credits"><span data-i18n="foot.photosS">Pictures from Wikimedia Commons:</span>
+      <a href="https://commons.wikimedia.org/wiki/File:0_Liceo_Ariosto_Ferrara_01.jpg">Liceo Ariosto</a>, Lungoleno, CC BY-SA 4.0;
+      <a href="https://commons.wikimedia.org/wiki/File:Arduino_Uno_board.jpg">Arduino Uno</a>, JrawX, CC0.</p>
+    <svg class="wordmark-big" viewBox="0 0 1000 214" role="img" aria-label="Faveri"><text x="0" y="206" textLength="1000" lengthAdjust="spacingAndGlyphs" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="290" letter-spacing="-8">FAVERI</text></svg>
+    <div class="legal"><span>© 2026 Andrea Faveri</span><a href="#top" class="link" data-i18n="foot.top">Back to top</a></div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

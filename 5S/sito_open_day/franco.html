@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuga dall'Ariosto</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-image: url(bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50%;
+      color: #fff;
+      padding: 50px;
+      font-size: 36px;
+    }
+
+    hr {
+        margin-top: -20px;
+        background-color: #cb3234;
+        height: 10px;
+        width: 25%;
+        border: 0;
+    }
+
+
+    section {
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    h3 {
+      font-size: 35px;
+    }
+
+    .container {
+      margin-top: 40px;
+      height: 180px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    label {
+      margin-bottom: 10px;
+      font-size: 18px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-left: 5px;
+      background-color: #cb3234;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    button:hover {
+      background-color: #a11d1f;
+    }
+
+    img{
+      margin: 15px 15px 15px 15px;
+      padding: 1px;
+      user-select: none;
+    }
+
+    .images {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fuga dall'Ariosto</h1>
+    <hr>
+  </header>
+  <h3>Unisci i frammenti!</h3>
+
+  <center>
+    <img src="end.png" alt="total">
+  </center>
+
+  <div class="images">
+    
+    <img id="1" src="giusto1.png" alt="1" data-numero="1" onclick="addImage(this)" draggable="false"> 
+    
+    <img id="2" src="nope1.png" alt="2" data-numero="2" onclick="addImage(this)" draggable="false">
+    
+    <img id="3" src="nope2.png" alt="3" data-numero="3" onclick="addImage(this)" draggable="false">
+    
+    <img id="4" src="giusto2.png" alt="4" data-numero="4" onclick="addImage(this)" draggable="false">
+    
+    <img id="5" src="nope3.png" alt="5" data-numero="5" onclick="addImage(this)" draggable="false">
+    
+    <img id="6" src="giusto3.png" alt="6" data-numero="6" onclick="addImage(this)" draggable="false">
+    
+  </div>
+  
+  
+<div class="container">
+  <button type="submit" onclick="controlWin()">Rispondi</button>
+</div>
+
+
+  <script>
+    let answ = [];
+
+    function addImage(img) {
+      for(let i = 0; i<answ.length; i++){
+          document.getElementById(answ[i]).style.border = "3px solid black"
+        }
+
+      let val = img.getAttribute("data-numero");
+      if(img.style.border != "3px solid black"){
+        img.style.border = "3px solid black";
+        answ.push(val);
+        answ.sort();
+      } else {
+        img.style.border = "none"
+        answ = answ.filter(item => item != val).sort();
+      }
+      
+      
+    }
+
+
+    function controlWin() {
+      if(answ[0] == "1" && answ[1] == "4" && answ[2] == "6"){
+        window.location.href = "endss.html";
+      } else{
+        for(let i = 0; i<answ.length; i++){
+          document.getElementById(answ[i]).style.border = "3px solid red"
+        }
+      }
+
+    }
+  </script>
+</body>
+</html>
