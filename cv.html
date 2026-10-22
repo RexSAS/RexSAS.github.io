@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CV · Andrea Faveri</title>
-<meta name="description" content="Andrea Faveri’s CV. Page under construction.">
-<meta name="robots" content="noindex">
+<meta name="description" content="Andrea Faveri’s CV: computer science student, software development and cybersecurity.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,24 +13,76 @@
 </head>
 <body>
 
-<main class="soon">
-  <p class="trace-label">CV</p>
-  <h1 class="soon-title">Under construction</h1>
-  <p class="soon-note">This page is still being written. Come back soon.</p>
-  <a class="soon-back" href="index.html#about">← Back to the site</a>
+<header class="topbar">
+  <a class="topbar-back" href="index.html#about">← Andrea Faveri</a>
+</header>
+
+<main class="cv">
+  <div class="cv-head">
+    <div>
+      <p class="trace-label">CV · 2026</p>
+      <h1 class="soon-title">Curriculum Vitae</h1>
+    </div>
+    <a class="cv-dl" href="assets/Andrea_Faveri_CV_2026.pdf" download>Download PDF ↓</a>
+  </div>
+  <!-- An image, not an embedded PDF: no viewer chrome, and phones show it too. Re-render with pdftoppm when the PDF changes -->
+  <img class="cv-page" src="assets/cv-2026.png" width="1818" height="2573" alt="Andrea Faveri’s CV, one page. The same content is in the PDF download.">
+
 </main>
+
+<footer class="cc-foot">
+  <a class="cc-home" href="index.html"><span class="cc-home-arrow" aria-hidden="true">←</span><span>Back to home</span></a>
+  <ul class="cc-foot-links" aria-label="Contacts">
+    <li><a href="mailto:andreafaveri@rxsas.it">andreafaveri@rxsas.it</a></li>
+    <li><a href="https://github.com/RexSAS" target="_blank" rel="noopener">GitHub</a></li>
+    <li><a href="https://instagram.com/rex_sas" target="_blank" rel="noopener">Instagram</a></li>
+    <li><button type="button" data-copy="rexsas" data-copied="copied" title="Copy Discord username" aria-label="Discord: copy username rexsas">Discord</button></li>
+    <li><a href="https://t.me/Rex_SAS" target="_blank" rel="noopener">Telegram</a></li>
+  </ul>
+</footer>
 
 <script>
   /* Follows the language chosen on the main page */
+  var discord = document.querySelector('[data-copy]');
   try {
     if (localStorage.getItem('lang') === 'it') {
       document.documentElement.lang = 'it';
-      document.querySelector('.trace-label').textContent = 'CV';
-      document.querySelector('.soon-title').textContent = 'In costruzione';
-      document.querySelector('.soon-note').textContent = 'Questa pagina è ancora in scrittura. Torna presto.';
-      document.querySelector('.soon-back').textContent = '← Torna al sito';
+      document.querySelector('.cv-dl').textContent = 'Scarica PDF ↓';
+      document.querySelector('.cc-home span:last-child').textContent = 'Torna alla home';
+      discord.title = 'Copia il nome utente Discord';
+      discord.setAttribute('aria-label', 'Discord: copia il nome utente rexsas');
+      discord.dataset.copied = 'copiato';
     }
   } catch (e) {}
+
+  /* Firefox opens PDFs in its viewer even with `download`; a generic blob always gets saved.
+     If the fetch fails the plain link still works */
+  var dl = document.querySelector('.cv-dl');
+  dl.addEventListener('click', function (e) {
+    if (!window.fetch || !URL.createObjectURL) return;
+    e.preventDefault();
+    fetch(dl.href).then(function (r) {
+      if (!r.ok) throw r;
+      return r.blob();
+    }).then(function (b) {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([b], { type: 'application/octet-stream' }));
+      a.download = 'Andrea_Faveri_CV_2026.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    }).catch(function () { location.href = dl.href; });
+  });
+
+  /* Footer: Discord has no profile link, so the button copies the username */
+  discord.addEventListener('click', function () {
+    if (!navigator.clipboard) return;
+    navigator.clipboard.writeText(discord.dataset.copy).then(function () {
+      discord.classList.add('copied');
+      setTimeout(function () { discord.classList.remove('copied'); }, 1600);
+    });
+  });
 </script>
 </body>
 </html>

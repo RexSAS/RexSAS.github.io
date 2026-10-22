@@ -78,9 +78,9 @@
 ```
 index.html            home page
 cyberchallenge.html   CyberChallenge.IT page
+cv.html               CV viewer + download
 rxwoods.html          ┐
-certificates.html     ├ pages still under construction
-cv.html               ┘
+certificates.html     ┘ pages still under construction
 css/style.css         all the styles
 js/main.js            home page: menu, language, greeting, timeline, live GitHub data
 js/i18n.js            Italian texts for the home page

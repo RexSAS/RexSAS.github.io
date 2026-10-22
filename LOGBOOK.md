@@ -113,7 +113,8 @@ The previous local draft ("dark room") is archived outside the repo in
 
 ### Files
 - `index.html`: the page.
-- `rxwoods.html`, `certificates.html`, `cv.html`: "Under construction" placeholders (`noindex`)
+- `rxwoods.html`, `certificates.html`: "Under construction" placeholders (`noindex`)
+- `cv.html`: CV shown as an image (`assets/cv-2026.png`) + download button for `assets/Andrea_Faveri_CV_2026.pdf`
   linked from "Interesting things I did".
 - `cyberchallenge.html`: the CyberChallenge.IT page, built section by section (styles under
   "CyberChallenge page" in `style.css`, script and Italian texts in `js/cc.js`). Complete; indexable.
@@ -137,7 +138,8 @@ The previous local draft ("dark room") is archived outside the repo in
 
 ### Content rules
 - No phone number, home address or private or personal life details on the site.
-- No CV download for now. It comes later, once the CV is updated.
+- The CV is downloadable from `cv.html`. To update it, replace `assets/Andrea_Faveri_CV_2026.pdf` and re-render the image:
+  `pdftoppm -png -r 220 -singlefile assets/Andrea_Faveri_CV_2026.pdf assets/cv-2026`
 - No blog, no per-project pages and no "uses" page for now.
 - No woodworking: it may get its own site later.
 - No old school projects (`4S/`, `5S/`) and no childish stuff (escape room, middle-school talks).
@@ -159,7 +161,7 @@ The previous local draft ("dark room") is archived outside the repo in
 - [ ] Decide the next sections, one step at a time (contact/footer, projects, record...)
 
 ### Next
-- [ ] Write the RxWoods, Certificates and CV pages (placeholders for now)
+- [ ] Write the RxWoods and Certificates pages (placeholders for now)
 - [x] Push the finished CyberChallenge.IT page (2026-10-22)
 - [ ] Send a test email to `andreafaveri@rxsas.it` (Cloudflare Email Routing accepts it; confirm it
       reaches the forwarding inbox)
@@ -169,13 +171,18 @@ The previous local draft ("dark room") is archived outside the repo in
 - [ ] Social/OpenGraph preview image and meta tags
 
 ### Later
-- [ ] CV download (after the CV is updated)
 - [ ] Performance pass: image sizes (WebP/AVIF), font loading, Lighthouse
 
 ### Done
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-22, step 25:** contribution grid: low levels brightened (l1 0.35→0.55, l2 0.6→0.72,
+  l3 0.85→0.88) so 1-contribution days are visible like on GitHub.
+- **2026-10-22, step 24:** CV page: `cv.html` shows the 2026 CV as an image of the page (no PDF
+  viewer chrome, works on phones) with a "Download PDF" button (EN/IT) and the same footer as
+  the CyberChallenge page (back to home + socials, Discord copies the username). The download
+  button fetches the PDF as a generic blob, so Firefox saves it instead of opening its viewer.
 - **2026-10-22, step 23:** README rewritten as a presentation of the repo (logo, screenshots in
   `docs/`, what's inside, how it's built, structure, run locally, credits); the logbook moved to
   `LOGBOOK.md`. Both, `docs/` and `TODO.md` are excluded from the site. Pushed together with
