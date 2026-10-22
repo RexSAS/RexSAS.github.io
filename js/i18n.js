@@ -25,6 +25,8 @@ window.I18N_IT = {
   'about.p1': 'Mi piace <em class="trait">capire come funzionano le cose</em>. È sempre stato così: smonto qualcosa, capisco perché si comporta in quel modo e solo dopo lo rimonto. Sono <em class="trait">paziente con i problemi</em> che ancora non hanno senso, e <em class="trait">imparo in fretta</em> qualunque strumento serva per il prossimo. Quasi tutta questa curiosità finisce nell’informatica: scrivere <mark class="hl hl-bone">codice</mark>, <mark class="hl hl-sky">creare app</mark>, le <mark class="hl hl-sand">reti</mark> e le macchine su cui girano, e la <mark class="hl hl-red">sicurezza</mark> che tiene in piedi tutto.',
   'about.p2': 'Studio informatica a Ferrara, e qualunque cosa costruisca <em class="trait">non smetto mai di ricostruirla</em>. Lontano dallo schermo mi trovi in palestra, oppure <em class="trait">perso in qualche nuova fissa</em>, tecnologica o no.',
   'about.did': 'Cose interessanti che ho fatto',
+  'did.certs': 'Certificati',
+  'did.cv': 'Ho fatto anche un CV!',
 
   'tools.title': 'Il banco da lavoro',
   'tools.legend': '<mark class="hl hl-bone">linguaggi</mark> <mark class="hl hl-sky">creare app</mark> <mark class="hl hl-red">sicurezza</mark> <mark class="hl hl-sand">infrastruttura</mark>',

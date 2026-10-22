@@ -198,27 +198,40 @@ ul { list-style: none; }
 
 /* Interesting things I did: links to their own pages */
 .did { margin-top: 3.5em; font-size: var(--step-body); }
-.did-list { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+.did-list { display: grid; grid-template-columns: repeat(2, max-content); gap: 16px 48px; }
 .did-list a {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--line); font-weight: 400; font-size: 1.375rem;
   color: var(--ink); text-decoration: none;
 }
-/* The link carries the security red: a small dot, an underline that is always there, the arrow */
+/* Each link carries its own colour (--c, red by default): a small dot, an underline, the arrow */
 .did-list a::before {
-  content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
-  box-shadow: 0 0 0 0 rgb(226 73 42 / 0.6); animation: did-pulse 2.6s ease-out infinite;
+  content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--accent));
+  animation: did-pulse 2.2s ease-out infinite;
 }
-@keyframes did-pulse { 70% { box-shadow: 0 0 0 7px rgb(226 73 42 / 0); } 100% { box-shadow: 0 0 0 0 rgb(226 73 42 / 0); } }
+@keyframes did-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 color-mix(in srgb, var(--c, var(--accent)) 70%, transparent), 0 0 5px color-mix(in srgb, var(--c, var(--accent)) 60%, transparent); }
+  20% { transform: scale(1.15); }
+  45% { transform: scale(1); }
+  75%, 100% { box-shadow: 0 0 0 9px transparent, 0 0 5px color-mix(in srgb, var(--c, var(--accent)) 60%, transparent); }
+}
+
 .did-list a span:first-child {
-  background: linear-gradient(var(--accent), var(--accent)) 0 100% / 100% 2px no-repeat;
+  background: linear-gradient(var(--c, var(--accent)), var(--c, var(--accent))) 0 100% / 100% 2px no-repeat;
   padding-bottom: 3px; transition: color var(--t-hover) ease, background-size 400ms var(--ease-out);
   background-color: transparent;
 }
-.did-list a .road-go { color: var(--accent); font-size: 0.85em; vertical-align: 0; margin-left: 0; }
-.did-list a:hover span:first-child, .did-list a:focus-visible span:first-child { color: var(--accent); }
+.did-list a .road-go { color: var(--c, var(--accent)); font-size: 0.85em; vertical-align: 0; margin-left: 0; }
+.did-list a:hover span:first-child, .did-list a:focus-visible span:first-child { color: var(--c, var(--accent)); }
 .did-list a:hover .road-go, .did-list a:focus-visible .road-go { transform: translate(3px, -3px); }
+/* Only the first link (the one with a real page) pulses */
+.did-list li + li a::before { animation: none; }
 @media (prefers-reduced-motion: reduce) { .did-list a::before { animation: none; } }
+@media (max-width: 640px) {
+  .did-list { grid-template-columns: repeat(2, max-content); column-gap: 18px; row-gap: 12px; }
+  .did-list a { font-size: 0.9375rem; gap: 7px; }
+  .did-list a::before { flex: none; width: 6px; height: 6px; }
+}
 
 /* Pages still to be written */
 .soon { min-height: 100svh; display: grid; place-content: center; justify-items: center; gap: 24px; padding: var(--margin); text-align: center; }
@@ -560,7 +573,7 @@ ul { list-style: none; }
 .cc-final-result strong { font-weight: 500; color: var(--ink); }
 .cc-final-result a { color: var(--ink); text-decoration: none; margin-left: 8px; border-bottom: 1px solid rgb(242 241 237 / 0.3); transition: border-color var(--t-hover) ease; }
 .cc-final-result a:hover { border-color: var(--ink); }
-@media (max-width: 760px) {
+@media (max-width: 920px) {
   .round { grid-template-columns: 1fr; }
   .round-ring { grid-row: auto; max-width: 340px; justify-self: center; }
   .round-text { min-height: 0; }

@@ -1,5 +1,7 @@
 exclude:
   - README.md
+  - LOGBOOK.md
+  - docs
   - TODO.md
   - Questions.txt
   - .taste-skill
