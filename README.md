@@ -112,7 +112,15 @@ The previous local draft ("dark room") is archived outside the repo in
 
 ### Files
 - `index.html`: the page.
-- `cyberchallenge.html`: placeholder "Under construction" page (styles `.soon` in `style.css`).
+- `cyberchallenge.html`: the CyberChallenge.IT page, built section by section (styles under
+  "CyberChallenge page" in `style.css`, script and Italian texts in `js/cc.js`). Complete; indexable.
+- `js/cc-map.js`: the interactive "What I learned" graph on that page (canvas, own physics,
+  no libraries). Subjects and their items (languages, tools, techniques, concepts) are the
+  `SUBJECTS` and `ITEMS` arrays at the top; an item's `of` lists every subject it links to.
+- `js/cc-final.js`: the animated attack/defence round in "The final" on that page.
+- `js/cc-bug.js`: the "Spot the bug" minigame on that page. The five snippets are the
+  `SNIPPETS` array (code lines, index of the flawed line, the fix, EN/IT texts).
+- `js/cc.js`: that page's title decrypt, count-up numbers, entrances and EN/IT switch.
 - `css/style.css`: all styles (tokens on `:root`).
 - `js/i18n.js`: the Italian dictionary (`window.I18N_IT`).
 - `js/main.js`: the dock (show on scroll, menu, language choice), the decrypt effect and
@@ -148,10 +156,10 @@ The previous local draft ("dark room") is archived outside the repo in
 - [ ] Decide the next sections, one step at a time (contact/footer, projects, record...)
 
 ### Next
-- [ ] Write the CyberChallenge.IT page (`cyberchallenge.html` is a placeholder)
+- [x] Push the finished CyberChallenge.IT page (2026-10-22)
 - [ ] Send a test email to `andreafaveri@rxsas.it` (Cloudflare Email Routing accepts it; confirm it
       reaches the forwarding inbox)
-- [ ] First commit and push to `RexSAS/RexSAS.github.io`. Check the repo name with
+- [x] First commit and push to `RexSAS/RexSAS.github.io` (2026-10-22). Check the repo name with
       `gh api repos/RexSAS/RexSAS.github.io --jq .full_name` before pushing; the old site
       lives in the `-backup` repo.
 - [ ] Social/OpenGraph preview image and meta tags
@@ -164,6 +172,51 @@ The previous local draft ("dark room") is archived outside the repo in
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-22, published:** the CyberChallenge.IT page and the home-page link changes went live.
+- **2026-10-22, step 20b:** tutoring photo on the CyberChallenge page at 60% greyscale, 35% on hover.
+- **2026-10-22, step 13e:** tried a red vertical line by "Interesting things I did", removed again.
+- **2026-10-22, step 13d:** CyberChallenge.IT link a little bigger (22px) and further below the about
+  text.
+- **2026-10-22, step 13c:** the CyberChallenge.IT link on the home page carries the security red:
+  a pulsing red dot, a 2px red underline, a red ↗; the text turns red on hover.
+- **2026-10-22, step 21b:** CyberChallenge footer: "Back to home" is now plain text with a gold
+  arrow that slides left and a gold underline that draws in on hover (no pill outline).
+- **2026-10-22, step 21:** simple footer on the CyberChallenge page: a "← Back to home" pill and
+  the socials (email, GitHub, Instagram, Discord copy, Telegram) on one line; the separate
+  back link at the end of the tutoring section was removed.
+- **2026-10-22, step 20:** CyberChallenge page, last section "A year later, as a tutor": photo,
+  the story of going back in 2024, what I taught (network security, software security,
+  attack/defence play), a big 6 (students from my class at the national final), a note on
+  helping later classes, the two UniFE articles, and "← Back to the home page". The page is
+  complete, so `noindex` was removed. Not pushed yet.
+- **2026-10-22, step 19b:** less space between sections on the CyberChallenge page (its own
+  `--section`: `clamp(96px, 11vw, 190px)`, about half the home page's).
+- **2026-10-22, step 19:** CyberChallenge page, fourth section "Spot the bug": a minigame with
+  five shuffled snippets (PHP SQL injection, C buffer overflow, Python path traversal, Python
+  command injection, JavaScript XSS). Click the flawed line; the answer names the flaw,
+  explains why it's dangerous and shows the fix; score dots, a results screen with a verdict,
+  Play again. Keyboard: Tab/arrows and Enter. EN/IT. Not pushed yet.
+- **2026-10-22, step 18:** CyberChallenge page, third section "The final" (29 June 2023, Turin):
+  intro to attack/defence, an animated round (a dot travels a ring through Find the flaw →
+  Write the patch → Build the exploit, the gold arc fills, the round counter goes up each lap;
+  clicking a step jumps there and pauses), count-up figures (42 teams, ~234 competitors,
+  410,000+ flags, 800 GB) and 0xFE's result with a link to the official ranking. EN/IT.
+- **2026-10-22, step 17b:** CyberChallenge page balance pass: elements appear with a short stagger
+  per section (the subject buttons no longer lag); smaller titles on that page (section titles,
+  hero title, numbers); bigger dots and 13–15px labels in the graph with more room between
+  them; graph area a little shorter.
+- **2026-10-22, step 17:** CyberChallenge page, second section "What I learned": an Obsidian-style
+  graph (canvas, hand-written physics). CyberChallenge.IT in the middle, 7 subjects around it;
+  hovering a subject springs out its languages, tools, techniques and concepts (colour-coded),
+  clicking keeps it open, dots can be dragged, shared items (e.g. Python) link to every subject
+  they belong to and light up together on hover. Glass card with what I learned in the subject,
+  legend, subject buttons for keyboard/touch, hidden text list for screen readers, EN/IT.
+  Top bar on that page gets a soft background fade. Not pushed yet.
+- **2026-10-22, step 16b:** CyberChallenge title smaller (`clamp(2rem, 6.4vw, 6rem)`, was up to 10rem).
+- **2026-10-22, step 16:** CyberChallenge.IT page, first section: full-screen hero over the
+  national-final photo (darkened), "2023 → 2024 · Ferrara, Turin", the title decrypting in,
+  a one-line summary and four count-up numbers (75 h, 4th of 20, 22nd of 42, 8 h); slim top
+  bar with ← Andrea Faveri and EN/IT. Not pushed yet.
 - **2026-10-22:** checked email: Cloudflare Email Routing is set up and accepts
   `andreafaveri@rxsas.it`; only a delivery test is left.
 - **2026-10-22, published:** committed and pushed the rebuild to `main`; it replaced the old

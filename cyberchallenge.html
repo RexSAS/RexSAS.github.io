@@ -4,33 +4,179 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CyberChallenge.IT · Andrea Faveri</title>
-<meta name="description" content="Andrea Faveri at CyberChallenge.IT. Page under construction.">
-<meta name="robots" content="noindex">
+<meta name="description" content="Andrea Faveri at CyberChallenge.IT: training in Ferrara, the national attack/defence final in Turin, and tutoring the next class.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-cc">
 
-<main class="soon">
-  <p class="trace-label">CyberChallenge.IT</p>
-  <h1 class="soon-title">Under construction</h1>
-  <p class="soon-note">This page is still being written. Come back soon.</p>
-  <a class="soon-back" href="index.html#about">← Back to the site</a>
+<header class="topbar">
+  <a class="topbar-back" href="index.html" data-i18n="cc.back">← Andrea Faveri</a>
+  <button class="lang" type="button" aria-label="Passa all’italiano">IT</button>
+</header>
+
+<main>
+
+  <section class="cc-hero" aria-labelledby="cc-title">
+    <img class="cc-hero-bg" src="assets/cc-nazionale.jpg" alt="" width="1600" height="1200">
+    <div class="cc-hero-inner">
+      <p class="trace-label cc-kicker reveal" data-i18n="cc.kicker">2023 → 2024 · Ferrara, Turin</p>
+      <h1 id="cc-title" class="cc-title" aria-label="CyberChallenge.IT"><span aria-hidden="true">CyberChallenge.IT</span></h1>
+      <p class="cc-lede reveal" data-i18n="cc.lede">Four months of security training at the University of Ferrara, eight hours of attack and defence in Turin, and a year later, back on the <em class="trait">other side of the desk</em>.</p>
+      <dl class="cc-stats reveal">
+        <div><dt data-i18n="cc.s1">hours of training</dt><dd><span class="count" data-to="75">75</span></dd></div>
+        <div><dt data-i18n="cc.s2">of 20 in the local round</dt><dd><span class="count" data-to="4">4</span><sup data-i18n="cc.s2sup">th</sup></dd></div>
+        <div><dt data-i18n="cc.s3">of 42 teams at the national final</dt><dd><span class="count" data-to="22">22</span><sup data-i18n="cc.s3sup">nd</sup></dd></div>
+        <div><dt data-i18n="cc.s4">hours of attack/defence</dt><dd><span class="count" data-to="8">8</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cc-map" id="map" aria-labelledby="map-title">
+    <div class="cc-map-head">
+      <div>
+        <p class="trace-label reveal" data-i18n="map.kicker">The programme, mapped</p>
+        <h2 id="map-title" class="head reveal" data-i18n="map.title">What I learned</h2>
+      </div>
+      <p class="cc-map-hint reveal" data-i18n="map.hint">Hover a subject to open it, click to keep it open, drag the dots around.</p>
+    </div>
+    <div class="cc-graph reveal">
+      <canvas class="cc-graph-canvas" aria-hidden="true"></canvas>
+      <div class="cc-graph-card" aria-live="polite" hidden>
+        <p class="cc-graph-card-k"></p>
+        <p class="cc-graph-card-t"></p>
+        <p class="cc-graph-card-d"></p>
+      </div>
+      <ul class="cc-graph-legend" aria-hidden="true">
+        <li><i class="lg-subject"></i><span data-i18n="map.lgSubject">Subject</span></li>
+        <li><i class="lg-lang"></i><span data-i18n="map.lgLang">Language</span></li>
+        <li><i class="lg-tool"></i><span data-i18n="map.lgTool">Tool</span></li>
+        <li><i class="lg-attack"></i><span data-i18n="map.lgAttack">Technique</span></li>
+        <li><i class="lg-concept"></i><span data-i18n="map.lgConcept">Concept</span></li>
+      </ul>
+    </div>
+    <div class="cc-subjects reveal" role="group" aria-label="Subjects" data-i18n-aria="map.subjects"></div>
+    <div class="visually-hidden cc-graph-list"></div>
+  </section>
+
+  <section class="cc-final" id="final" aria-labelledby="final-title">
+    <p class="trace-label reveal" data-i18n="fin.kicker">29 June 2023 · Turin</p>
+    <h2 id="final-title" class="head reveal" data-i18n="fin.title">The final</h2>
+    <p class="cc-final-lede reveal" data-i18n="fin.lede">At the International Training Centre of the ILO in Turin, 42 teams played <em class="trait">eight hours of attack/defence</em>. Every team gets the same vulnerable services and has to keep its own running while attacking everyone else’s. One round goes like this:</p>
+
+    <div class="round reveal">
+      <svg class="round-ring" viewBox="-80 -10 560 420" aria-hidden="true">
+        <circle class="round-track" cx="200" cy="200" r="150"/>
+        <path class="round-arc" d=""/>
+        <circle class="round-dot" r="6" cx="200" cy="50"/>
+        <text class="round-k" x="200" y="190" text-anchor="middle" data-i18n="fin.round">Round</text>
+        <text class="round-n" x="200" y="232" text-anchor="middle">1</text>
+      </svg>
+      <ol class="round-steps">
+        <li><button type="button" data-step="0"><span class="round-num">01</span><span data-i18n="fin.s1">Find the flaw</span></button></li>
+        <li><button type="button" data-step="1"><span class="round-num">02</span><span data-i18n="fin.s2">Write the patch</span></button></li>
+        <li><button type="button" data-step="2"><span class="round-num">03</span><span data-i18n="fin.s3">Build the exploit</span></button></li>
+      </ol>
+      <div class="round-text" aria-live="polite">
+        <p class="round-text-t"></p>
+        <p class="round-text-d"></p>
+      </div>
+    </div>
+
+    <dl class="cc-stats cc-final-stats reveal">
+      <div><dt data-i18n="fin.n1">teams</dt><dd><span class="count" data-to="42">42</span></dd></div>
+      <div><dt data-i18n="fin.n2">competitors</dt><dd><span class="cc-approx">~</span><span class="count" data-to="234">234</span></dd></div>
+      <div><dt data-i18n="fin.n3">flags stolen</dt><dd><span class="count" data-to="410000">410,000</span><span class="cc-plus">+</span></dd></div>
+      <div><dt data-i18n="fin.n4">of network traffic</dt><dd><span class="count" data-to="800">800</span><span class="cc-unit">GB</span></dd></div>
+    </dl>
+    <p class="cc-final-result reveal"><span data-i18n="fin.result">Team 0xFE finished <strong>22nd of 42</strong> with over <strong>26,500 points</strong>.</span> <a href="https://cyberchallenge.it/attack-defense/2023" target="_blank" rel="noopener" data-i18n="fin.ranking">See the full ranking ↗</a></p>
+  </section>
+
+  <section class="cc-bug" id="spot" aria-labelledby="bug-title">
+    <p class="trace-label reveal" data-i18n="bug.kicker">Your turn</p>
+    <h2 id="bug-title" class="head reveal" data-i18n="bug.title">Spot the bug</h2>
+    <p class="cc-final-lede reveal" data-i18n="bug.lede">Five snippets, one flaw each, the kind you hunt for in the first minutes of an attack/defence round. <em class="trait">Click the line an attacker would go for.</em></p>
+
+    <div class="bug reveal">
+      <div class="bug-bar">
+        <span class="bug-round"></span>
+        <span class="bug-lang"></span>
+        <span class="bug-dots" aria-hidden="true"></span>
+      </div>
+      <div class="bug-body">
+        <ol class="bug-code" aria-label="Code"></ol>
+        <aside class="bug-side" aria-live="polite">
+          <div class="bug-ask">
+            <p class="bug-ask-k" data-i18n="bug.askK">Find the flaw</p>
+            <p class="bug-ask-t"></p>
+          </div>
+          <div class="bug-answer" hidden>
+            <p class="bug-verdict"></p>
+            <p class="bug-name"></p>
+            <p class="bug-why"></p>
+            <p class="bug-label" data-i18n="bug.fix">The fix</p>
+            <pre class="bug-fix"></pre>
+            <button type="button" class="bug-next"></button>
+          </div>
+        </aside>
+      </div>
+      <div class="bug-end" hidden>
+        <p class="bug-end-k" data-i18n="bug.endK">Review complete</p>
+        <p class="bug-end-score"><b></b> / 5</p>
+        <p class="bug-end-verdict"></p>
+        <button type="button" class="bug-again" data-i18n="bug.again">Play again</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cc-tutor" id="tutor" aria-labelledby="tutor-title">
+    <p class="trace-label reveal" data-i18n="tut.kicker">From 2024 · University of Ferrara</p>
+    <h2 id="tutor-title" class="head reveal" data-i18n="tut.title">A year later, as a tutor</h2>
+    <div class="tutor">
+      <figure class="tutor-photo reveal">
+        <img src="assets/cc-demo.jpg" alt="Andrea showing a demo to CyberChallenge students in a university lab" data-i18n-alt="tut.alt" width="1400" height="933" loading="lazy">
+      </figure>
+      <div class="tutor-text">
+        <p class="reveal" data-i18n="tut.p1">Because of my ranking in Ferrara, in 2024 I went back to CyberChallenge.IT on the <em class="trait">other side of the desk</em>. I supported the new students in the university labs and helped them get ready for the national tournament, so that their team could go further than we did.</p>
+        <p class="tutor-k reveal" data-i18n="tut.taught">What I taught</p>
+        <ul class="tutor-topics reveal">
+          <li><i class="lg-concept"></i><span data-i18n="tut.t1">Network security</span></li>
+          <li><i class="lg-lang"></i><span data-i18n="tut.t2">Software security</span></li>
+          <li><i class="lg-attack"></i><span data-i18n="tut.t3">Attack/defence play</span></li>
+        </ul>
+        <div class="tutor-stat reveal">
+          <span class="tutor-num"><span class="count" data-to="6">6</span></span>
+          <span class="tutor-num-t" data-i18n="tut.stat">students from my class made it to the national final.</span>
+        </div>
+        <p class="tutor-note reveal" data-i18n="tut.note">Officially it was 2024, but I kept dropping by to help the classes after it.</p>
+        <p class="tutor-links reveal"><span data-i18n="tut.press">The University of Ferrara wrote about it:</span>
+          <a href="https://www.unife.it/it/notizie/2023/vita-universitaria/squadra-unife-cyber-challenge-2023" target="_blank" rel="noopener" data-i18n="tut.l1">the UniFE team ↗</a>
+          <a href="https://www.unife.it/it/notizie/2023/vita-universitaria/finale-cyber-challenge-2023" target="_blank" rel="noopener" data-i18n="tut.l2">the 2023 final ↗</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<script>
-  /* Follows the language chosen on the main page */
-  try {
-    if (localStorage.getItem('lang') === 'it') {
-      document.documentElement.lang = 'it';
-      document.querySelector('.soon-title').textContent = 'In costruzione';
-      document.querySelector('.soon-note').textContent = 'Questa pagina è ancora in scrittura. Torna presto.';
-      document.querySelector('.soon-back').textContent = '← Torna al sito';
-    }
-  } catch (e) {}
-</script>
+<footer class="cc-foot">
+  <a class="cc-home" href="index.html"><span class="cc-home-arrow" aria-hidden="true">←</span><span data-i18n="foot.home">Back to home</span></a>
+  <ul class="cc-foot-links" aria-label="Contacts">
+    <li><a href="mailto:andreafaveri@rxsas.it">andreafaveri@rxsas.it</a></li>
+    <li><a href="https://github.com/RexSAS" target="_blank" rel="noopener">GitHub</a></li>
+    <li><a href="https://instagram.com/rex_sas" target="_blank" rel="noopener">Instagram</a></li>
+    <li><button type="button" data-copy="rexsas" data-copied="copied" title="Copy Discord username" aria-label="Discord: copy username rexsas">Discord</button></li>
+    <li><a href="https://t.me/Rex_SAS" target="_blank" rel="noopener">Telegram</a></li>
+  </ul>
+</footer>
+
+<script src="js/cc.js"></script>
+<script src="js/cc-map.js"></script>
+<script src="js/cc-final.js"></script>
+<script src="js/cc-bug.js"></script>
 </body>
 </html>
