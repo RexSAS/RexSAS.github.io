@@ -1,4 +1,5 @@
 exclude:
-  - SESSION-NOTES.md
   - README.md
+  - TODO.md
+  - Questions.txt
   - .taste-skill
