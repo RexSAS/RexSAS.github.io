@@ -149,7 +149,8 @@ The previous local draft ("dark room") is archived outside the repo in
 
 ### Next
 - [ ] Write the CyberChallenge.IT page (`cyberchallenge.html` is a placeholder)
-- [ ] Make sure `andreafaveri@rxsas.it` receives mail (linked in the footer)
+- [ ] Send a test email to `andreafaveri@rxsas.it` (Cloudflare Email Routing accepts it; confirm it
+      reaches the forwarding inbox)
 - [ ] First commit and push to `RexSAS/RexSAS.github.io`. Check the repo name with
       `gh api repos/RexSAS/RexSAS.github.io --jq .full_name` before pushing; the old site
       lives in the `-backup` repo.
@@ -163,6 +164,8 @@ The previous local draft ("dark room") is archived outside the repo in
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-22:** checked email: Cloudflare Email Routing is set up and accepts
+  `andreafaveri@rxsas.it`; only a delivery test is left.
 - **2026-10-22, published:** committed and pushed the rebuild to `main`; it replaced the old
   site on rxsas.it.
 - **2026-10-22, step 11g:** pinned repos are no longer hidden from "Recently updated"; they get a
