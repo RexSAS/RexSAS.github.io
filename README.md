@@ -6,12 +6,12 @@ from the `main` branch of `RexSAS/RexSAS.github.io`. It's served at https://rxsa
 
 This README is the project's logbook: it's updated after every change.
 
-## Current state (2026-10-21)
+## Current state (2026-10-22)
 
-**Status:** third rebuild, started from scratch and built one step at a time. The direction is
-now **minimal and elegant**. Nothing is committed or pushed yet, so the live site still shows
-the previous commit. The previous local draft ("dark room": boot log, terminal, homelab) is
-archived outside the repo in `../site-drafts/2026-10-19-dark-room/`.
+**Status:** live. The minimal rebuild was committed (`21d563c`) and pushed to `main` on
+2026-10-22, replacing the previous site; GitHub Pages built it and https://rxsas.it serves it.
+The previous local draft ("dark room") is archived outside the repo in
+`../site-drafts/2026-10-19-dark-room/`.
 
 **Verified:** headless Chromium screenshots at 1440 px and 390 px, with no overflow.
 
@@ -163,6 +163,8 @@ archived outside the repo in `../site-drafts/2026-10-19-dark-room/`.
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-22, published:** committed and pushed the rebuild to `main`; it replaced the old
+  site on rxsas.it.
 - **2026-10-22, step 11g:** pinned repos are no longer hidden from "Recently updated"; they get a
   small gold "pinned" tag there instead.
 - **2026-10-22, step 15d:** menu panel restyled as dark glass (see-through smoked tint, strong
