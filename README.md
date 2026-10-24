@@ -79,8 +79,8 @@
 index.html            home page
 cyberchallenge.html   CyberChallenge.IT page
 cv.html               CV viewer + download
-rxwoods.html          ┐
-certificates.html     ┘ pages still under construction
+certificates.html     certificates (list in js/certs.js)
+rxwoods.html          page still under construction
 css/style.css         all the styles
 js/main.js            home page: menu, language, greeting, timeline, live GitHub data
 js/i18n.js            Italian texts for the home page
@@ -88,6 +88,7 @@ js/cc.js              CyberChallenge page: language, title, numbers, entrances
 js/cc-map.js          the "What I learned" graph
 js/cc-final.js        the attack/defence round
 js/cc-bug.js          the "Spot the bug" minigame
+js/certs.js           Certificates page: the CERTS list, viewer, downloads
 assets/               photos
 docs/                 screenshots for this README (not published)
 LOGBOOK.md            state, roadmap and changelog (not published)

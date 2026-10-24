@@ -249,6 +249,54 @@ ul { list-style: none; }
 .cv-dl:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
 .cv-page { width: 100%; height: auto; display: block; }
 
+/* Certificates page (reuses the .cv layout and the .cv-dl button) */
+.cert-list { display: grid; gap: clamp(64px, 10vw, 120px); }
+.certs { max-width: 1200px; }
+/* Phone: picture on top; wide screens: text left, picture right, courses underneath */
+.cert { display: grid; gap: 20px; grid-template-areas: "shot" "info" "more"; }
+.cert-shot { grid-area: shot; }
+.cert-info { grid-area: info; display: grid; gap: 12px; align-content: center; justify-items: start; }
+.cert-courses { grid-area: more; }
+.cert-desc { color: var(--muted); max-width: 46ch; }
+.cert-info .cert-actions { margin-top: 8px; }
+.cert-info .cert-name { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); line-height: 1.2; }
+@media (min-width: 860px) {
+  .cert { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); grid-template-areas: "info shot" "more more"; gap: 24px clamp(32px, 5vw, 64px); }
+}
+.cert img, .cert-view img { display: block; width: 100%; height: auto; }
+.cert-shot, .cert-grid button { padding: 0; border: 0; background: none; font: inherit; color: inherit; cursor: zoom-in; }
+.cert-shot img { border-radius: 4px; transition: opacity var(--t-hover) ease; }
+.cert-shot:hover img { opacity: 0.92; }
+.cert-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+.cert-name { font-size: 1.25rem; font-weight: 500; }
+.cert-by { margin-top: 4px; font-size: var(--step-small); color: var(--muted); }
+.cert-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
+.cert-verify { font-size: var(--step-small); color: var(--muted); text-decoration: none; transition: color var(--t-hover) ease; }
+.cert-verify:hover { color: var(--ink); }
+.cert-courses summary {
+  display: inline-flex; align-items: center; min-height: 44px; list-style: none; cursor: pointer;
+  font-size: var(--step-small); color: var(--muted); transition: color var(--t-hover) ease;
+}
+.cert-courses summary::-webkit-details-marker { display: none; }
+.cert-courses summary::after { content: "+"; margin-left: 8px; font-family: var(--line); }
+.cert-courses[open] summary::after { content: "−"; }
+.cert-courses summary:hover { color: var(--ink); }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px 16px; margin: 16px 0 0; padding: 0; list-style: none; }
+.cert-grid button { display: grid; gap: 10px; width: 100%; text-align: left; font-size: var(--step-small); color: var(--muted); transition: color var(--t-hover) ease; }
+.cert-grid img { border-radius: 3px; transition: transform 300ms var(--ease-out); }
+.cert-grid button:hover { color: var(--ink); }
+.cert-grid button:hover img { transform: translateY(-3px); }
+.cert :focus-visible, .cert-view :focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
+/* Full-size viewer */
+.cert-view {
+  width: min(1100px, calc(100vw - 32px)); max-height: calc(100svh - 32px); padding: 52px 16px 16px;
+  border: 0; border-radius: 8px; background: var(--bg); color: var(--ink);
+}
+.cert-view::backdrop { background: rgb(8 8 10 / 0.8); backdrop-filter: blur(4px); }
+.cert-view img { max-height: calc(100svh - 200px); object-fit: contain; }
+.cert-view .cert-row { margin-top: 16px; }
+.cert-close { position: absolute; top: 4px; right: 8px; width: 44px; height: 44px; border: 0; background: none; color: var(--ink); font-size: 1.75rem; line-height: 1; cursor: pointer; }
+
 /* Toolbox shelf */
 .tools { padding: 0 var(--margin) var(--section); }
 .tools-head { display: flex; align-items: baseline; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }

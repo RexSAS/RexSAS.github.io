@@ -113,7 +113,9 @@ The previous local draft ("dark room") is archived outside the repo in
 
 ### Files
 - `index.html`: the page.
-- `rxwoods.html`, `certificates.html`: "Under construction" placeholders (`noindex`)
+- `rxwoods.html`: "Under construction" placeholder (`noindex`)
+- `certificates.html` + `js/certs.js`: certificates page, built from the `CERTS` list at the top of
+  `js/certs.js`; files in `assets/certificates/<name>/` (PDF + JPG preview per certificate)
 - `cv.html`: CV shown as an image (`assets/cv-2026.png`) + download button for `assets/Andrea_Faveri_CV_2026.pdf`
   linked from "Interesting things I did".
 - `cyberchallenge.html`: the CyberChallenge.IT page, built section by section (styles under
@@ -161,7 +163,7 @@ The previous local draft ("dark room") is archived outside the repo in
 - [ ] Decide the next sections, one step at a time (contact/footer, projects, record...)
 
 ### Next
-- [ ] Write the RxWoods and Certificates pages (placeholders for now)
+- [ ] Write the RxWoods page (placeholder for now)
 - [x] Push the finished CyberChallenge.IT page (2026-10-22)
 - [ ] Send a test email to `andreafaveri@rxsas.it` (Cloudflare Email Routing accepts it; confirm it
       reaches the forwarding inbox)
@@ -177,6 +179,13 @@ The previous local draft ("dark room") is archived outside the repo in
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-24, step 26:** Certificates page: the Google AI Professional Certificate (Google ·
+  Coursera) shown large with Verify ↗ and Download PDF; "See the 8 courses" opens a grid of the
+  single-course certificates, each opening in a full-size viewer with its own verify/download.
+  Driven by the `CERTS` list in `js/certs.js` so new certificates are one entry each. EN/IT, same
+  footer as the other pages. PDFs renamed from Coursera IDs to readable slugs. Layout: on wide
+  screens title, description (optional `desc` {en, it}) and buttons on the left, certificate on
+  the right, courses underneath (4 per row); on phones the certificate goes on top.
 - **2026-10-22, step 25:** contribution grid: low levels brightened (l1 0.35→0.55, l2 0.6→0.72,
   l3 0.85→0.88) so 1-contribution days are visible like on GitHub.
 - **2026-10-22, step 24:** CV page: `cv.html` shows the 2026 CV as an image of the page (no PDF

@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Certificates · Andrea Faveri</title>
-<meta name="description" content="Andrea Faveri’s certificates. Page under construction.">
-<meta name="robots" content="noindex">
+<meta name="description" content="Andrea Faveri’s certificates: courses and programmes completed outside university.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,24 +13,39 @@
 </head>
 <body>
 
-<main class="soon">
-  <p class="trace-label">Certificates</p>
-  <h1 class="soon-title">Under construction</h1>
-  <p class="soon-note">This page is still being written. Come back soon.</p>
-  <a class="soon-back" href="index.html#about">← Back to the site</a>
+<header class="topbar">
+  <a class="topbar-back" href="index.html#about">← Andrea Faveri</a>
+</header>
+
+<main class="cv certs">
+  <div>
+    <p class="trace-label" data-i18n="label">Certificates</p>
+    <h1 class="soon-title" data-i18n="title">What I studied on my own</h1>
+  </div>
+  <!-- Filled by js/certs.js from the CERTS list -->
+  <div class="cert-list"></div>
 </main>
 
-<script>
-  /* Follows the language chosen on the main page */
-  try {
-    if (localStorage.getItem('lang') === 'it') {
-      document.documentElement.lang = 'it';
-      document.querySelector('.trace-label').textContent = 'Certificati';
-      document.querySelector('.soon-title').textContent = 'In costruzione';
-      document.querySelector('.soon-note').textContent = 'Questa pagina è ancora in scrittura. Torna presto.';
-      document.querySelector('.soon-back').textContent = '← Torna al sito';
-    }
-  } catch (e) {}
-</script>
+<dialog class="cert-view">
+  <button class="cert-close" type="button" aria-label="Close">×</button>
+  <img alt="">
+  <div class="cert-row">
+    <p class="cert-name"></p>
+    <div class="cert-actions"></div>
+  </div>
+</dialog>
+
+<footer class="cc-foot">
+  <a class="cc-home" href="index.html"><span class="cc-home-arrow" aria-hidden="true">←</span><span data-i18n="home">Back to home</span></a>
+  <ul class="cc-foot-links" aria-label="Contacts">
+    <li><a href="mailto:andreafaveri@rxsas.it">andreafaveri@rxsas.it</a></li>
+    <li><a href="https://github.com/RexSAS" target="_blank" rel="noopener">GitHub</a></li>
+    <li><a href="https://instagram.com/rex_sas" target="_blank" rel="noopener">Instagram</a></li>
+    <li><button type="button" data-copy="rexsas" data-copied="copied" title="Copy Discord username" aria-label="Discord: copy username rexsas">Discord</button></li>
+    <li><a href="https://t.me/Rex_SAS" target="_blank" rel="noopener">Telegram</a></li>
+  </ul>
+</footer>
+
+<script src="js/certs.js"></script>
 </body>
 </html>
