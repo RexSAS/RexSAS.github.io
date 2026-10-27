@@ -217,13 +217,6 @@ The previous local draft ("dark room") is archived outside the repo in
   stacked on phones; less space between posts. Photos share one height (`min(65svh, 560px)`) and,
   when there are several, scroll sideways with snap plus ‹ 1 / n › controls. Top bar is sticky
   (blurred paper) and has the EN/IT button like the main site: shows the other language, switches
-  live (posts re-render on `langchange`), shared with rxsas.it through `localStorage.lang`. Tested
-  with sample posts at 1440 and 390 px.
-- **2026-10-28, step 33:** Rex Woods journal layout: posts sorted by their own `date` (newest first)
-  on every render; on wide screens each post is photos | text, swapping sides on even posts;
-  stacked on phones; less space between posts. Photos share one height (`min(65svh, 560px)`) and,
-  when there are several, scroll sideways with snap plus ‹ 1 / n › controls. Top bar is sticky
-  (blurred paper) and has the EN/IT button like the main site: shows the other language, switches
   live (posts re-render on `langchange`), shared with rxsas.it through `localStorage.lang`. In the
   editor, "Forget token" moved to the left of the buttons. Tested with sample posts at 1440 and 390 px.
 - **2026-10-24, step 26:** Certificates page: the Google AI Professional Certificate (Google ·
