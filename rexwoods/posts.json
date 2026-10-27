@@ -17,5 +17,25 @@
       "en": "Idk if its Poplar or not... But i used an useless piece of wood, now its useful to mix my drinks",
       "it": "Non so se fosse veramente pioppo... ma in ogni caso ho usato un pezzo che altrimenti sarebbe stato buttato. Invece ora è utile per mescolare le mie bevande :D"
     }
+  },
+  {
+    "date": "2026-09-05",
+    "dir": "posts/2026-09-a-candel-decoration/",
+    "photos": [
+      "1.jpg",
+      "2.jpg"
+    ],
+    "title": {
+      "en": "A candel decoration",
+      "it": "Una decorazione per candele"
+    },
+    "wood": {
+      "en": "Linden - Willow",
+      "it": "Tiglio - Salice"
+    },
+    "text": {
+      "en": "This is a gift for my grandmother, who loves robins very much.",
+      "it": "Questo è un regalo per mia nonna, alla quale piacciono molto i pettirosso."
+    }
   }
 ]
