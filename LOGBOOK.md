@@ -205,6 +205,10 @@ The previous local draft ("dark room") is archived outside the repo in
   Contents read/write), pasted once and kept in that browser's localStorage (`rexwoods-token`).
   **Since posts are committed from the browser, run `git pull` before working locally.** Tested
   end to end with a mocked GitHub API (password gate, commit contents, 401 failure path).
+- **2026-10-28, step 31:** First real post published from the browser editor ("A Little Spoon",
+  commit `08a88ef`). Photos were too big (a portrait photo filled the 860 px column, ~1150 px tall):
+  the first photo now keeps its shape with `max-height: 70svh`, extra photos are square thumbnails,
+  3 per row.
 - **2026-10-24, step 26:** Certificates page: the Google AI Professional Certificate (Google ·
   Coursera) shown large with Verify ↗ and Download PDF; "See the 8 courses" opens a grid of the
   single-course certificates, each opening in a full-size viewer with its own verify/download.
