@@ -18,7 +18,7 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 
 /* Top bar */
-.bar { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 14px var(--margin); }
+.bar { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 14px var(--margin); background: linear-gradient(rgb(243 238 229 / 0.92) 35%, rgb(243 238 229 / 0)); }
 .bar-mark img { width: 40px; }
 .bar-right { display: flex; align-items: center; gap: 22px; }
 .bar-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; }
