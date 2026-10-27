@@ -80,7 +80,7 @@ index.html            home page
 cyberchallenge.html   CyberChallenge.IT page
 cv.html               CV viewer + download
 certificates.html     certificates (list in js/certs.js)
-rxwoods.html          page still under construction
+rexwoods/              Rex Woods, the woodworking sub-site (own look; images in rexwoods/images/)
 css/style.css         all the styles
 js/main.js            home page: menu, language, greeting, timeline, live GitHub data
 js/i18n.js            Italian texts for the home page

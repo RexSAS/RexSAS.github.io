@@ -113,7 +113,7 @@ The previous local draft ("dark room") is archived outside the repo in
 
 ### Files
 - `index.html`: the page.
-- `rxwoods.html`: "Under construction" placeholder (`noindex`)
+- `rexwoods/`: Rex Woods sub-site, separate design from the main site. `index.html` is still the "Under construction" placeholder (`noindex`); logos and photos go in `rexwoods/images/`
 - `certificates.html` + `js/certs.js`: certificates page, built from the `CERTS` list at the top of
   `js/certs.js`; files in `assets/certificates/<name>/` (PDF + JPG preview per certificate)
 - `cv.html`: CV shown as an image (`assets/cv-2026.png`) + download button for `assets/Andrea_Faveri_CV_2026.pdf`
@@ -163,7 +163,7 @@ The previous local draft ("dark room") is archived outside the repo in
 - [ ] Decide the next sections, one step at a time (contact/footer, projects, record...)
 
 ### Next
-- [ ] Write the RxWoods page (placeholder for now)
+- [ ] Write the Rex Woods sub-site (`rexwoods/`; first design sketch done, needs photos)
 - [x] Push the finished CyberChallenge.IT page (2026-10-22)
 - [ ] Send a test email to `andreafaveri@rxsas.it` (Cloudflare Email Routing accepts it; confirm it
       reaches the forwarding inbox)
@@ -179,6 +179,32 @@ The previous local draft ("dark room") is archived outside the repo in
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-27, step 27:** Rex Woods becomes its own sub-site folder: `rxwoods.html` moved to
+  `rexwoods/index.html` (served at `/rexwoods/`), with `rexwoods/images/` for logos and photos. The
+  home link now points to `rexwoods/` and reads "Rex Woods".
+- **2026-10-27, step 28:** First Rex Woods design sketch, its own look and `rexwoods/style.css`:
+  warm paper `#f3eee5`, ink `#1c1a17`, walnut `#6b4a2f` labels, Cormorant Garamond + Work Sans.
+  Sections: top bar (RW mark, ← rxsas.it), hero with the full logo and a line, "From the bench"
+  grid with 3 placeholder pieces, "Why wood" text placeholder, small footer. Logos cleaned into
+  transparent `rw-mark-*` and `rexwoods-logo-*` PNGs (dark/light); the Gemini JPEG originals
+  are kept outside the repo in `../site-drafts/rexwoods-logo-originals/`. Italian via `data-it`,
+  following the saved `lang`. Checked at 1440 px and 390 px. Favicon `images/favicon.png`: the
+  black RW mark on a rounded paper square (180 px), so it reads on light and dark tabs.
+- **2026-10-28, step 29:** Rex Woods becomes a journal: the 3 placeholder frames are replaced by
+  posts rendered from `POSTS` in `rexwoods/posts.js` (newest first): date · wood, title, first
+  photo full width with the rest in a 2-column row (each opens full size), and the description
+  (line breaks kept). EN/IT per post. Photos live in `rexwoods/posts/<YYYY-MM-name>/`; the how-to is
+  at the top of `posts.js`. Empty list shows "The first work is coming soon." Tested with sample
+  posts at 1440 px and 390 px.
+- **2026-10-28, step 30:** Rex Woods editor in the browser. Posts moved from a JS list to
+  `rexwoods/posts.json` (read by `posts.js`). Clicking "Andrea Faveri" in the footer asks for the
+  password (only its SHA-256 is in `admin.js`; it hides the editor, it is not security) and opens a
+  form: title, wood, date, description (EN/IT), photos. Publish shrinks photos to 1600 px JPEG in
+  the browser and makes ONE commit on `main` via the GitHub API (photos + updated posts.json); Pages
+  is live about a minute later. Publishing needs a fine-grained GitHub token (only this repo,
+  Contents read/write), pasted once and kept in that browser's localStorage (`rexwoods-token`).
+  **Since posts are committed from the browser, run `git pull` before working locally.** Tested
+  end to end with a mocked GitHub API (password gate, commit contents, 401 failure path).
 - **2026-10-24, step 26:** Certificates page: the Google AI Professional Certificate (Google ·
   Coursera) shown large with Verify ↗ and Download PDF; "See the 8 courses" opens a grid of the
   single-course certificates, each opening in a full-size viewer with its own verify/download.
