@@ -219,9 +219,9 @@ The previous local draft ("dark room") is archived outside the repo in
   (blurred paper) and has the EN/IT button like the main site: shows the other language, switches
   live (posts re-render on `langchange`), shared with rxsas.it through `localStorage.lang`. In the
   editor, "Forget token" moved to the left of the buttons. Tested with sample posts at 1440 and 390 px.
-- **2026-10-28, step 34:** Rex Woods top bar: no blur; just two soft paper fades (radial, 92%)
-  behind the logo and behind the links, the middle fully transparent, so they stay readable over
-  photos.
+- **2026-10-28, step 34:** Rex Woods top bar: no fade or blur; two solid paper tabs in the top
+  corners (logo left, links right) reaching the screen edges, inner bottom corner rounded 18 px, the
+  middle fully transparent. The bar itself ignores clicks so the clear middle never blocks the page.
 - **2026-10-24, step 26:** Certificates page: the Google AI Professional Certificate (Google ·
   Coursera) shown large with Verify ↗ and Download PDF; "See the 8 courses" opens a grid of the
   single-course certificates, each opening in a full-size viewer with its own verify/download.

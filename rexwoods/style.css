@@ -18,12 +18,13 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 
 /* Top bar */
-/* The fade sits only behind the logo (left) and the links (right); the middle stays clear */
-.bar { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 14px var(--margin); background:
-  radial-gradient(farthest-side at 0 40%, rgb(243 238 229 / 0.92) 45%, rgb(243 238 229 / 0)) left / calc(var(--margin) + 120px) 100% no-repeat,
-  radial-gradient(farthest-side at 100% 40%, rgb(243 238 229 / 0.92) 55%, rgb(243 238 229 / 0)) right / calc(var(--margin) + 230px) 100% no-repeat; }
+/* Solid paper blocks in the two top corners, reaching the screen edges; the middle stays clear */
+.bar { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: flex-start; pointer-events: none; }
+.bar-mark, .bar-right { pointer-events: auto; background: var(--paper); padding: 12px 22px; min-height: 64px; display: flex; align-items: center; }
+.bar-mark { padding-left: var(--margin); border-bottom-right-radius: 18px; }
+.bar-right { padding-right: var(--margin); border-bottom-left-radius: 18px; }
 .bar-mark img { width: 40px; }
-.bar-right { display: flex; align-items: center; gap: 22px; }
+.bar-right { gap: 22px; }
 .bar-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; }
 .bar-back:hover { color: var(--ink); }
 /* Same as the main site's language button: shows the other language */
