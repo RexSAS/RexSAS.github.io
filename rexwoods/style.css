@@ -48,12 +48,6 @@ a { color: inherit; }
 .post-text { margin-top: 24px; font: 400 clamp(1.15rem, 1rem + 0.5vw, 1.35rem)/1.6 var(--serif); max-width: 60ch; white-space: pre-line; }
 .post-empty { color: var(--muted); font: italic 1.25rem var(--serif); }
 
-/* Workshop */
-.workshop { display: grid; gap: 40px; grid-template-columns: 1fr; }
-.workshop > p { font: 400 clamp(1.25rem, 1rem + 0.8vw, 1.6rem)/1.5 var(--serif); max-width: 34ch; }
-.workshop .section-title { margin-bottom: 0; }
-@media (min-width: 860px) { .workshop { grid-template-columns: 1fr 1.4fr; align-items: start; } }
-
 /* Footer */
 .foot { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; padding: 32px var(--margin); border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
 .foot img { width: 28px; opacity: 0.8; }

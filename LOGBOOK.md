@@ -210,6 +210,8 @@ The previous local draft ("dark room") is archived outside the repo in
   the first photo now keeps its shape with `max-height: 70svh`, extra photos are square thumbnails,
   3 per row. Asset links now carry `?v=2026-10-28` (bump on change) because Cloudflare caches CSS/JS
   for 4 hours.
+- **2026-10-28, step 32:** Removed the "Why wood" section (and its divider and CSS) from Rex Woods:
+  no text for it yet; the journal now runs straight into the footer.
 - **2026-10-24, step 26:** Certificates page: the Google AI Professional Certificate (Google ·
   Coursera) shown large with Verify ↗ and Download PDF; "See the 8 courses" opens a grid of the
   single-course certificates, each opening in a full-size viewer with its own verify/download.
