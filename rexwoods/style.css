@@ -18,7 +18,10 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 
 /* Top bar */
-.bar { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 14px var(--margin); background: linear-gradient(rgb(243 238 229 / 0.92) 35%, rgb(243 238 229 / 0)); }
+/* The fade sits only behind the logo (left) and the links (right); the middle stays clear */
+.bar { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 14px var(--margin); background:
+  radial-gradient(farthest-side at 0 40%, rgb(243 238 229 / 0.92) 45%, rgb(243 238 229 / 0)) left / calc(var(--margin) + 120px) 100% no-repeat,
+  radial-gradient(farthest-side at 100% 40%, rgb(243 238 229 / 0.92) 55%, rgb(243 238 229 / 0)) right / calc(var(--margin) + 230px) 100% no-repeat; }
 .bar-mark img { width: 40px; }
 .bar-right { display: flex; align-items: center; gap: 22px; }
 .bar-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; }
