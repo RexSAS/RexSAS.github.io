@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "date": "2026-10-06",
+    "dir": "posts/2026-10-a-little-spoon/",
+    "photos": [
+      "1.jpg"
+    ],
+    "title": {
+      "en": "A Little Spoon",
+      "it": "Un Piccolo Cucchiaino"
+    },
+    "wood": {
+      "en": "Maybe Poplar",
+      "it": "Probabilmente Pioppo"
+    },
+    "text": {
+      "en": "Idk if its Poplar or not... But i used an useless piece of wood, now its useful to mix my drinks",
+      "it": "Non so se fosse veramente pioppo... ma in ogni caso ho usato un pezzo che altrimenti sarebbe stato buttato. Invece ora è utile per mescolare le mie bevande :D"
+    }
+  }
+]
