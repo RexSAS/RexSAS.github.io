@@ -12,13 +12,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 <!-- ?v= makes Cloudflare (4 h cache) fetch the new file: bump it when style.css or the scripts change -->
-<link rel="stylesheet" href="style.css?v=2026-10-28">
+<link rel="stylesheet" href="style.css?v=2026-10-28-2">
 </head>
 <body>
 
 <header class="bar">
   <a class="bar-mark" href="#top" aria-label="Rex Woods"><img src="images/rw-mark-dark.png" alt=""></a>
-  <a class="bar-back" href="../index.html">← rxsas.it</a>
+  <div class="bar-right">
+    <a class="bar-back" href="../index.html">← rxsas.it</a>
+    <button class="bar-lang" type="button" aria-label="Passa all’italiano">IT</button>
+  </div>
 </header>
 
 <main id="top">
@@ -43,15 +46,31 @@
 </footer>
 
 <script>
-  /* Follows the language chosen on the main site */
-  try {
-    if (localStorage.getItem('lang') === 'it') {
-      document.documentElement.lang = 'it';
-      document.querySelectorAll('[data-it]').forEach(el => { el.textContent = el.dataset.it; });
+  /* EN/IT like the main site: the button shows the other language, and the choice is shared with
+     rxsas.it through localStorage 'lang'. posts.js re-renders on 'langchange'. */
+  (function () {
+    var btn = document.querySelector('.bar-lang');
+    var nodes = document.querySelectorAll('[data-it]');
+    function setLang(l, save) {
+      document.documentElement.lang = l;
+      nodes.forEach(function (n) {
+        if (n._en == null) n._en = n.textContent;
+        n.textContent = l === 'it' ? n.dataset.it : n._en;
+      });
+      btn.textContent = l === 'it' ? 'EN' : 'IT';
+      btn.setAttribute('aria-label', l === 'it' ? 'Switch to English' : 'Passa all’italiano');
+      if (save) {
+        try { localStorage.setItem('lang', l); } catch (e) {}
+        document.dispatchEvent(new Event('langchange'));
+      }
     }
-  } catch (e) {}
+    var saved = 'en';
+    try { saved = localStorage.getItem('lang') === 'it' ? 'it' : 'en'; } catch (e) {}
+    setLang(saved, false);
+    btn.addEventListener('click', function () { setLang(document.documentElement.lang === 'it' ? 'en' : 'it', true); });
+  })();
 </script>
-<script src="posts.js?v=2026-10-28"></script>
+<script src="posts.js?v=2026-10-28-2"></script>
 <script src="admin.js?v=2026-10-28"></script>
 </body>
 </html>

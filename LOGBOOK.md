@@ -212,6 +212,13 @@ The previous local draft ("dark room") is archived outside the repo in
   for 4 hours.
 - **2026-10-28, step 32:** Removed the "Why wood" section (and its divider and CSS) from Rex Woods:
   no text for it yet; the journal now runs straight into the footer.
+- **2026-10-28, step 33:** Rex Woods journal layout: posts sorted by their own `date` (newest first)
+  on every render; on wide screens each post is photos | text, swapping sides on even posts;
+  stacked on phones; less space between posts. Photos share one height (`min(65svh, 560px)`) and,
+  when there are several, scroll sideways with snap plus ‹ 1 / n › controls. Top bar is sticky
+  (blurred paper) and has the EN/IT button like the main site: shows the other language, switches
+  live (posts re-render on `langchange`), shared with rxsas.it through `localStorage.lang`. Tested
+  with sample posts at 1440 and 390 px.
 - **2026-10-24, step 26:** Certificates page: the Google AI Professional Certificate (Google ·
   Coursera) shown large with Verify ↗ and Download PDF; "See the 8 courses" opens a grid of the
   single-course certificates, each opening in a full-size viewer with its own verify/download.
