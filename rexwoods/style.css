@@ -83,4 +83,5 @@ a { color: inherit; }
 .editor button { font: 500 0.9rem var(--sans); padding: 10px 16px; border: 1px solid var(--ink); background: none; color: var(--ink); cursor: pointer; }
 .editor button[type=submit] { background: var(--ink); color: var(--paper); }
 .editor button[hidden] { display: none; }
+.editor-forget { margin-right: auto; }
 .editor button:disabled { opacity: 0.5; cursor: wait; }
