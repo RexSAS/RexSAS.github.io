@@ -179,6 +179,7 @@ The previous local draft ("dark room") is archived outside the repo in
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-28:** the four dots pulse a quarter beat apart instead of in sync.
 - **2026-10-28:** all four "Interesting things I did" dots pulse now (each in its own colour),
   since Rex Woods, Certificates and CV have real pages.
 - **2026-10-27, step 27:** Rex Woods becomes its own sub-site folder: `rxwoods.html` moved to
