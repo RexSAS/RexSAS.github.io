@@ -224,8 +224,6 @@ ul { list-style: none; }
 .did-list a .road-go { color: var(--c, var(--accent)); font-size: 0.85em; vertical-align: 0; margin-left: 0; }
 .did-list a:hover span:first-child, .did-list a:focus-visible span:first-child { color: var(--c, var(--accent)); }
 .did-list a:hover .road-go, .did-list a:focus-visible .road-go { transform: translate(3px, -3px); }
-/* Only the first link (the one with a real page) pulses */
-.did-list li + li a::before { animation: none; }
 @media (prefers-reduced-motion: reduce) { .did-list a::before { animation: none; } }
 @media (max-width: 640px) {
   .did-list { grid-template-columns: repeat(2, max-content); column-gap: 18px; row-gap: 12px; }

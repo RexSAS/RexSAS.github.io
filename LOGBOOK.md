@@ -179,6 +179,8 @@ The previous local draft ("dark room") is archived outside the repo in
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-28:** all four "Interesting things I did" dots pulse now (each in its own colour),
+  since Rex Woods, Certificates and CV have real pages.
 - **2026-10-27, step 27:** Rex Woods becomes its own sub-site folder: `rxwoods.html` moved to
   `rexwoods/index.html` (served at `/rexwoods/`), with `rexwoods/images/` for logos and photos. The
   home link now points to `rexwoods/` and reads "Rex Woods".
