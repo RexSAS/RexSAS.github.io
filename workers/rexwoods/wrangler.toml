@@ -1,0 +1,7 @@
+name = "rexwoods"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+# Custom domain: Cloudflare creates the DNS record and certificate for it
+routes = [{ pattern = "rexwoods.rxsas.it", custom_domain = true }]

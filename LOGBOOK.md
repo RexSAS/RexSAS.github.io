@@ -222,6 +222,13 @@ The previous local draft ("dark room") is archived outside the repo in
 - **2026-10-28, step 34:** Rex Woods top bar: no fade or blur; two solid paper tabs in the top
   corners (logo left, links right) reaching the screen edges, inner bottom corner rounded 18 px, the
   middle fully transparent. The bar itself ignores clicks so the clear middle never blocks the page.
+- **2026-10-28, step 35:** Rex Woods moved to its own address, https://rexwoods.rxsas.it. The files
+  stay in `rexwoods/`; a Cloudflare Worker (`workers/rexwoods/`, deploy with `npx wrangler deploy`
+  from that folder, account of rxsas.it) serves `rxsas.it/rexwoods/<path>` at the subdomain and keeps
+  redirects on it; `wrangler` created the DNS record and certificate. The old `rxsas.it/rexwoods/`
+  sends visitors over with a tiny script; the home link and "← rxsas.it" use full URLs; `workers` is
+  excluded from Pages. Being another origin, the subdomain keeps its own `lang` choice and editor
+  token (paste the token again there).
 - **2026-10-24, step 26:** Certificates page: the Google AI Professional Certificate (Google ·
   Coursera) shown large with Verify ↗ and Download PDF; "See the 8 courses" opens a grid of the
   single-course certificates, each opening in a full-size viewer with its own verify/download.
