@@ -179,6 +179,11 @@ The previous local draft ("dark room") is archived outside the repo in
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-29:** two certificates added to the Certificates page: BLSD "Full D" (Italian Red
+  Cross, Ferrara, Oct 2023) and CyberChallenge.IT 2023 participation. The raw scans were
+  replaced by cleaned copies in `assets/certificates/blsd/` and `cyberchallenge/` (the codice
+  fiscale is blacked out, the Red Cross scan rotated upright, PDFs rebuilt from pixels).
+  `certs.js`: `verify` is optional and `title`/`by` can be `{ en, it }`; script link versioned.
 - **2026-10-28:** Cloudflare caches `style.css` for 4 hours, so CSS changes weren't showing.
   Every page now links `css/style.css?v=YYYYMMDD`; bump the date whenever the CSS changes.
 - **2026-10-28:** the four dots pulse a quarter beat apart instead of in sync.

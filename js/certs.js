@@ -1,7 +1,7 @@
 /* Certificates page. To add a certificate: put its PDF in assets/certificates/<dir>/,
    render the preview with `pdftoppm -jpeg -jpegopt quality=85 -scale-to 1600 -singlefile <file>.pdf <file>`
-   and add an entry to CERTS (newest first). `desc` and `courses` are optional; `courses` is for
-   programmes made of several courses. */
+   and add an entry to CERTS (newest first). `desc`, `verify` and `courses` are optional; `courses`
+   is for programmes made of several courses. `title` and `by` can be a string or { en, it }. */
 var CERTS = [
   {
     title: 'Google AI Professional Certificate',
@@ -24,6 +24,28 @@ var CERTS = [
       { title: 'AI for App Building', file: 'ai-for-app-building', verify: 'https://coursera.org/verify/PEOLNNR47RI7' },
       { title: 'AI for App Deployment', file: 'ai-for-app-deployment', verify: 'https://coursera.org/verify/S3PPO91C8VUH' }
     ]
+  },
+  {
+    title: { en: 'BLSD · CPR and defibrillation, adults and children', it: 'BLSD · Rianimazione e defibrillazione, adulti e bambini' },
+    by: { en: 'Italian Red Cross · Ferrara', it: 'Croce Rossa Italiana · Ferrara' },
+    date: '2023-10',
+    dir: 'assets/certificates/blsd/',
+    file: 'blsd-full-d',
+    desc: {
+      en: 'Basic life support with a defibrillator for adults and children (“Full D”), following the European Resuscitation Council guidelines. Passed.',
+      it: 'Rianimazione cardiopolmonare e defibrillazione per adulti e bambini (“Full D”), secondo le linee guida dell’European Resuscitation Council. Superato con esito positivo.'
+    }
+  },
+  {
+    title: { en: 'CyberChallenge.IT 2023 · Certificate of participation', it: 'CyberChallenge.IT 2023 · Attestato di partecipazione' },
+    by: { en: 'CINI Cybersecurity National Lab · University of Ferrara', it: 'Cybersecurity National Lab del CINI · Università di Ferrara' },
+    date: '2023-06',
+    dir: 'assets/certificates/cyberchallenge/',
+    file: 'cyberchallenge-2023',
+    desc: {
+      en: 'The security training programme in Ferrara, the local competition on 31 May and the national attack/defence final on 29 June 2023.',
+      it: 'Il programma di formazione sulla sicurezza a Ferrara, la gara locale del 31 maggio e la finale nazionale attacco/difesa del 29 giugno 2023.'
+    }
   }
 ];
 
@@ -45,6 +67,7 @@ var CERTS = [
     document.querySelectorAll('[data-i18n]').forEach(function (n) { n.textContent = T[n.dataset.i18n]; });
   }
 
+  function tx(v) { return typeof v === 'string' ? v : (it ? v.it : v.en); }
   function el(tag, cls, text) {
     var n = document.createElement(tag);
     if (cls) n.className = cls;
@@ -59,11 +82,14 @@ var CERTS = [
   // Verify + download links for one certificate (dir is the parent entry's folder)
   function actions(c, dir) {
     var box = el('div', 'cert-actions');
-    var v = link('cert-verify', c.verify, T.verify);
-    v.target = '_blank'; v.rel = 'noopener';
+    if (c.verify) {
+      var v = link('cert-verify', c.verify, T.verify);
+      v.target = '_blank'; v.rel = 'noopener';
+      box.appendChild(v);
+    }
     var d = link('cv-dl', dir + c.file + '.pdf', T.download);
     d.download = c.file + '.pdf';
-    box.appendChild(v); box.appendChild(d);
+    box.appendChild(d);
     return box;
   }
 
@@ -72,10 +98,10 @@ var CERTS = [
   view.querySelector('.cert-close').setAttribute('aria-label', T.close);
   function show(c, dir) {
     viewImg.src = dir + c.file + '.jpg';
-    viewImg.alt = c.title;
-    view.querySelector('.cert-name').textContent = c.title;
+    viewImg.alt = tx(c.title);
+    view.querySelector('.cert-name').textContent = tx(c.title);
     view.querySelector('.cert-actions').replaceWith(actions(c, dir));
-    view.setAttribute('aria-label', c.title);
+    view.setAttribute('aria-label', tx(c.title));
     view.showModal();
   }
   view.querySelector('.cert-close').addEventListener('click', function () { view.close(); });
@@ -87,16 +113,16 @@ var CERTS = [
     var art = el('article', 'cert');
     var big = el('button', 'cert-shot');
     big.type = 'button';
-    big.setAttribute('aria-label', T.open + c.title);
+    big.setAttribute('aria-label', T.open + tx(c.title));
     var img = el('img');
     img.src = c.dir + c.file + '.jpg'; img.alt = ''; img.width = 1600; img.height = 1237;
     big.appendChild(img);
     big.addEventListener('click', function () { show(c, c.dir); });
 
     var info = el('div', 'cert-info');
-    info.appendChild(el('h2', 'cert-name', c.title));
+    info.appendChild(el('h2', 'cert-name', tx(c.title)));
     var when = new Date(c.date + '-01T00:00:00').toLocaleDateString(locale, { month: 'long', year: 'numeric' });
-    info.appendChild(el('p', 'cert-by', c.by + ' · ' + when));
+    info.appendChild(el('p', 'cert-by', tx(c.by) + ' · ' + when));
     if (c.desc) info.appendChild(el('p', 'cert-desc', it ? c.desc.it : c.desc.en));
     info.appendChild(actions(c, c.dir));
     art.appendChild(info);
