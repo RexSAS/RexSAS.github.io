@@ -179,6 +179,9 @@ The previous local draft ("dark room") is archived outside the repo in
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-29:** certificates alternate on wide screens (text|image, image|text, …); the
+  CyberChallenge scan is cropped to the card (no white scanner margin), renamed so the cache
+  can't serve the old one.
 - **2026-10-29:** two certificates added to the Certificates page: BLSD "Full D" (Italian Red
   Cross, Ferrara, Oct 2023) and CyberChallenge.IT 2023 participation. The raw scans were
   replaced by cleaned copies in `assets/certificates/blsd/` and `cyberchallenge/` (the codice

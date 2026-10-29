@@ -264,6 +264,8 @@ ul { list-style: none; }
 .cert-info .cert-name { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); line-height: 1.2; }
 @media (min-width: 860px) {
   .cert { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); grid-template-areas: "info shot" "more more"; gap: 24px clamp(32px, 5vw, 64px); }
+  /* Every other certificate flips: image left, text right */
+  .cert:nth-child(even) { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); grid-template-areas: "shot info" "more more"; }
 }
 .cert img, .cert-view img { display: block; width: 100%; height: auto; }
 .cert-shot, .cert-grid button { padding: 0; border: 0; background: none; font: inherit; color: inherit; cursor: zoom-in; }

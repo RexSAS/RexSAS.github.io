@@ -41,7 +41,7 @@ var CERTS = [
     by: { en: 'CINI Cybersecurity National Lab · University of Ferrara', it: 'Cybersecurity National Lab del CINI · Università di Ferrara' },
     date: '2023-06',
     dir: 'assets/certificates/cyberchallenge/',
-    file: 'cyberchallenge-2023',
+    file: 'cyberchallenge-2023-participation',
     desc: {
       en: 'The security training programme in Ferrara, the local competition on 31 May and the national attack/defence final on 29 June 2023.',
       it: 'Il programma di formazione sulla sicurezza a Ferrara, la gara locale del 31 maggio e la finale nazionale attacco/difesa del 29 giugno 2023.'
