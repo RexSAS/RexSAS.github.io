@@ -179,6 +179,9 @@ The previous local draft ("dark room") is archived outside the repo in
 - [x] Minimal rebuild, step 1: Greetings, About (placeholder text) and Toolbox (2026-10-21)
 
 ## Changelog
+- **2026-10-29:** history rewritten to drop the two raw certificate scans (one showed the codice
+  fiscale): `7896a7b` removed, later commits re-hashed, force-pushed. GitHub still serves the old
+  commits by ID until GitHub Support purges them (request pending).
 - **2026-10-29:** a thin line between certificates on the Certificates page.
 - **2026-10-29:** certificates alternate on wide screens (text|image, image|text, …); the
   CyberChallenge scan is cropped to the card (no white scanner margin), renamed so the cache
