@@ -252,7 +252,9 @@ ul { list-style: none; }
 .cv-page { width: 100%; height: auto; display: block; }
 
 /* Certificates page (reuses the .cv layout and the .cv-dl button) */
-.cert-list { display: grid; gap: clamp(64px, 10vw, 120px); }
+.cert-list { display: grid; gap: clamp(32px, 5vw, 60px); }
+/* A hairline halfway between certificates */
+.cert + .cert { padding-top: clamp(32px, 5vw, 60px); border-top: 1px solid rgb(242 241 237 / 0.12); }
 .certs { max-width: 1200px; }
 /* Phone: picture on top; wide screens: text left, picture right, courses underneath */
 .cert { display: grid; gap: 20px; grid-template-areas: "shot" "info" "more"; }
